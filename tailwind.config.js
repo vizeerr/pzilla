@@ -7,10 +7,15 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      fontFamily: {
+        bebasneue: ['var(--font-bebas)'],
+        montserrat:['var(--font-mont)']
       },
+      colors:{
+        primary:'#A8FF2F',
+        sec:'#262626',
+        tertiary :'#3F3F3F'
+      }
     },
   },
   plugins: [],

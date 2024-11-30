@@ -2,26 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+:root{
+  --prim-color : #A8FF2F
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+body{
+  margin: 0;
+  padding: 0;
+  background: #1E1E25;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@font-face{
+  font-family: 'round';
+  src:url("../fonts/rd.otf") format("opentype")
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.round{
+  font-family: 'round',sans-serif;
+}
+
+.anim{
+  transition: 0.3s ease-in-out;
+}
+.anim:hover{
+  scale: 1.1;
 }
