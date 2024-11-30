@@ -80,7 +80,7 @@ const TopHeader = () => {
         </div>
 
         <div className="flex flex-col items-end">
-            <div className="bg-primary w-[275px] border-[6px] border-[#3C3C3C] shadow-[10.16px_13.2px_33.51px_0px_#00000040] rounded-[45px_0px] py-3 text-center">
+            <div className="bg-primary anim w-[275px] border-[6px] border-[#3C3C3C] shadow-[10.16px_13.2px_33.51px_0px_#00000040] rounded-[45px_0px] py-3 text-center">
                 <p className="font-[900] font-montserrat text-[21px] text-[#3C3C3C]">PUMPZILLA TOKEN</p>
             </div>
             <div onClick={()=>setOpen(true)} className="anim shadow-[12.65px_16.44px_41.74px_0px_#00000040] flex items-center gap-8 bg-[#36373E] mt-4 rounded-full px-10 pt-4 py-3 w-[405px] ">
