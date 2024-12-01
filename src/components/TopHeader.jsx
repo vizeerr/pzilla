@@ -10,6 +10,7 @@ import setico from "@/assets/setico.png"
 import { useState } from "react"
 import Model from "./Model"
 import Image from "next/image"
+import Link from "next/link"
 
 const TopHeader = () => {
     const [open,setOpen] = useState(false);
@@ -18,6 +19,7 @@ const TopHeader = () => {
   return (
     <>
     <div className=" mt-8 ps-[43px] pe-5 flex items-center justify-between">
+    <Link href={"/launch"}>
       <div className='w-[673px] anim py-5 px-20 font-montserrat bg-[#5B5B6C4F] shadow-[12px_12px_40px_0px_#0000005E] rounded-[120px_0px_120px_0px]'>
         <p className='font-[800] text-white text-[65px] m-0 leading-tight'>LAUNCH YOUR</p>
         <div className="flex items-center gap-16">
@@ -26,6 +28,7 @@ const TopHeader = () => {
         </div>
         
       </div>
+      </Link>
       <div className="flex items-center justify-between gap-10">
         <div className="relative">
                 <Image  src={pif} width={80} unoptimized={true} className="absolute top-[-30px] start-[-40px]" alt=""  />

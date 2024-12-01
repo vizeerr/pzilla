@@ -17,10 +17,18 @@ body{
   src:url("../fonts/rd.otf") format("opentype")
 }
 
+@font-face{
+  font-family: 'sachabo';
+  src:url("../fonts/sh.otf") format("opentype")
+}
+
 .round{
   font-family: 'round',sans-serif;
 }
 
+.sachabo{
+  font-family: 'sachabo',sans-serif;
+}
 .anim{
   transition: 0.3s ease-in-out;
 }

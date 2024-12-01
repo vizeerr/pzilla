@@ -1,10 +1,17 @@
-
+"use client"
 import logo from "@/assets/logo.svg"
 import xlogo from "@/assets/tlogo.svg"
 import tlogo from "@/assets/xlogo.svg"
 import Image from "next/image"
+import Link from "next/link"
+import { usePathname } from 'next/navigation'
+ 
 
 const TopNavbar = () => {
+ 
+  const pathname = usePathname()
+  console.log(pathname);
+  
   
   return (
     
@@ -14,7 +21,9 @@ const TopNavbar = () => {
           <Image className=""  src={logo} alt="" />
         </div>
         <div className="flex items-center gap-4 pe-4">
-          <button className="px-[30px] anim rounded-full font-bebasneue bg-sec text-white text-[23px] pt-1 pb-0.5  ">LAUNCH</button>
+          <Link href={"/launch"}>
+          <button className={`${pathname == "/launch" ? 'bg-white text-[#262626]' :"bg-sec text-white"} px-[30px] anim rounded-full font-bebasneue  text-[23px] pt-1 pb-0.5  `}>LAUNCH</button>
+          </Link>
           <button className="w-[45.73px] anim h-[45.73px] rounded-full bg-sec p-3">
             <Image src={xlogo} alt="" />
           </button>
