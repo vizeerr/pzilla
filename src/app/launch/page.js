@@ -59,7 +59,7 @@ const page = () => {
               </div>
             </div>
             <div className='w-full flex justify-center mt-[67px]'>
-            <button className='border-0 bg-primary shadow-[0px_4px_4px_0px_#00000040] text-[#38383F] mx-auto round font-[500] text-[82px] w-[398px] leading-[85px] pt-4 rounded-full'>LAUNCH</button>
+            <button className='anim border-0 bg-primary shadow-[0px_4px_4px_0px_#00000040] text-[#38383F] mx-auto round font-[500] text-[82px] w-[398px] leading-[85px] pt-4 rounded-full'>LAUNCH</button>
             </div>
       </div>
       </div>
