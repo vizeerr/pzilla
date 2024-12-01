@@ -33,7 +33,7 @@ const page = () => {
         </div>
 
         <div>
-              <p className='text-primary text-[29px] font-[800] '>DESCRIPTION</p>
+              <p className='text-primary text-[29px] font-[800] mt-8 '>DESCRIPTION</p>
               <textarea  placeholder='ENTER TOKEN DESCRIPTION' className='border-0 h-[186px] mt-1 w-full bg-[#38383F] opacity-60 font-[400] font-bebasneue m-0 text-white text-[32px] px-[25px] py-[5px] rounded-[13px] shadow-[20px_20px_33.3px_0px_#00000066]'/>
             </div>
           <div className='flex gap-[66px] w-full'>
@@ -53,8 +53,8 @@ const page = () => {
             </div>
             <div>
               <p className='text-primary text-[29px] font-[800] mt-8'>INITIAL BUY</p>
-              <div className='flex justify-center items-center h-[75px] mt-1 w-full bg-[#38383F] opacity-60 font-[400] font-bebasneue m-0 text-white text-[32px] px-[25px] py-[5px] rounded-[13px] shadow-[20px_20px_33.3px_0px_#00000066]'>
-                <input type="text" placeholder='ENTER TOKEN TICKER' className='border-0 w-full bg-[#38383F] opacity-60 font-[400] font-bebasneue text-white text-[32px]'/>
+              <div className='flex justify-center items-center h-[104px] mt-1 w-full bg-[#38383F] opacity-60 font-[400] font-bebasneue m-0 text-white text-[32px] px-[25px] py-[5px] rounded-[13px] shadow-[20px_20px_33.3px_0px_#00000066]'>
+                <input type="text" placeholder='ENTER AMOUNT' className='border-0 w-full bg-[#38383F] opacity-60 font-[400] font-bebasneue text-white text-[32px]'/>
                 <p className='font-bebasneue font-[400] w-[300px] text-[32px] text-white '>USER BALANCE : <span className='text-primary'>0 ETH</span></p>
               </div>
             </div>
@@ -72,8 +72,9 @@ const page = () => {
           $50 (gas fee + extra) back !
           </span></p>
         </div>
-        <div className='w-[728px] bg-[#38383F] rounded-[60px] ps-[28px] py-[40px]'>
-          <p className='font-montserrat font-[900] text-primary p-[5px] text-[48px] bg-[#19191C] px-8 py-6 w-[311px] rounded-[32px]'>0.144 ETH</p>
+        <div className='curvbg w-[728px]  rounded-[60px] ps-[28px] py-[40px] relative'>
+          <p className='anim  text-[#1B1C1E] sachabo text-[40px] bg-primary rounded-full px-4 pt-6 absolute end-0 top-0 pb-4 text-center w-[290px]'> DEVELOPER REWARD</p>
+          <p className='font-montserrat font-[900] text-primary p-[5px] text-[48px] bg-[#19191C] px-8 pb-6 pt-4 w-[311px] rounded-[32px]'>0.144 ETH</p>
           <p className='sachabo text-primary font-[400] mt-2 text-[58px] mx-[40px]'> Directly into your wallet</p>
           <p className='sachabo text-white font-[400] text-[58px] mt-[50px] mx-[40px]'> Achieve the Bonding Curve milestone.</p>
 

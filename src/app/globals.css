@@ -35,3 +35,8 @@ body{
 .anim:hover{
   scale: 1.1;
 }
+
+.curvbg{
+  background-image: url("../assets/curv.svg");
+  background-size:cover ;
+}
