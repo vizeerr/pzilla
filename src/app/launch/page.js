@@ -1,6 +1,7 @@
 import TopNavbar from '@/components/TopNavbar'
 import React from 'react'
 import line from "@/assets/line.svg"
+import cam from "@/assets/cam.svg"
 import Image from 'next/image'
 
 const page = () => {
@@ -25,9 +26,10 @@ const page = () => {
               <input type="text" placeholder='ENTER TOKEN TICKER' className='border-0 h-[75px] mt-1 w-full bg-[#38383F] opacity-60 font-[400] font-bebasneue m-0 text-white text-[32px] px-[25px] py-[5px] rounded-[13px] shadow-[20px_20px_33.3px_0px_#00000066]'/>
             </div>
           </div>
-          <div className='bg-[#38383F] mt-6 rounded-[37px] w-[273px] h-[273px] border-[4px] border-[#A8FF2F] p-[55px]'>
-          <p className='font-bebasneue font-[400] text-[25px] mx-auto text-[#65656A] leading-[33px]'>JPEG/PNG/WEBP/GIF<br/>
-          LESS THAN 4MB</p>
+          <div className='bg-[#38383F] flex flex-col justify-center items-center mt-6 rounded-[37px] w-[273px] h-[273px] border-[4px] border-[#A8FF2F] p-[55px]'>
+            <Image unoptimized={true} src={cam}/>
+          <p className='font-bebasneue  font-[400] text-center mt-4 text-[25px] mx-auto text-[#65656A] leading-[33px]'>JPEG/PNG/WEBP/GIF<br/>
+          <span className='text-[21px]'>LESS THAN 4MB</span></p>
           </div>
 
         </div>
