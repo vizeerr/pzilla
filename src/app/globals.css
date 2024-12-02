@@ -40,3 +40,14 @@ body{
   background-image: url("../assets/curv.svg");
   background-size:cover ;
 }
+
+.gradientText{
+    background: linear-gradient(90deg, #A8FF2F 0%, #67FFDA 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.bggradient{
+  background: linear-gradient(90deg, #A8FF2F 0%, #67FFDA 100%);
+}

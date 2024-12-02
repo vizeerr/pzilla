@@ -24,10 +24,10 @@ export default function Home() {
   return (
     <div>
       <div className='sticky top-0 bg-[#1E1E25] z-20 pb-4'>
-      <TopNavbar/>
-      <TopHeader/>
-      <Tabs/>
-    </div>
+        <TopNavbar/>
+        <TopHeader/>
+        <Tabs/>
+      </div>
     <CardGrid data={paginatedData} />
     <Pagination
       currentPage={currentPage}
