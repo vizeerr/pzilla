@@ -30,7 +30,7 @@ const LaunchForm = () => {
             </div>
           </div>
           <div className='bg-[#38383F] flex flex-col justify-center items-center mt-6 rounded-[37px] w-[273px] h-[273px] border-[4px] border-[#A8FF2F] p-[55px]'>
-            <Image unoptimized={true} src={cam}/>
+            <Image unoptimized={true} alt="camera" width={120} src={cam}/>
           <p className='font-bebasneue  font-[400] text-center mt-4 text-[25px] mx-auto text-[#65656A] leading-[33px]'>JPEG/PNG/WEBP/GIF<br/>
           <span className='text-[21px]'>LESS THAN 4MB</span></p>
           </div>
