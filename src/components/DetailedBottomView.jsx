@@ -47,7 +47,7 @@ const DetailedBottomView = () => {
             </div>
             <p className='text-primary font-[800] text-[22px] pe-8 pt-2'>21 minutes ago</p>
           </div>
-          <p className='font-[800] text-[22px] leading-[26px] text-white px-10 my-8'>SOLANAFIGHTS ⚔️🥊 JOIN liE VERY FIRST TAP-SWAP GAME LIKE HAMSTER KOMBAT ON SOLANA 🔥 TELEGRAM GAME/BOT IS ALREADY LIVE ✅ FAIR LAUNCH IS COMING SOON, DON'T MISS IT ➡️ https://t.me/solanafights</p>
+          <p className='font-[800] text-[22px] leading-[26px] text-white px-10 my-8'>SOLANAFIGHTS ⚔️🥊 JOIN liE VERY FIRST TAP-SWAP GAME LIKE HAMSTER KOMBAT ON SOLANA 🔥 TELEGRAM GAME/BOT IS ALREADY LIVE ✅ FAIR LAUNCH IS COMING SOON, DONT MISS IT ➡️ https://t.me/solanafights</p>
           
         </div>
 
@@ -60,7 +60,7 @@ const DetailedBottomView = () => {
             </div>
             <p className='text-primary font-[800] text-[22px] pe-8 pt-2'>21 minutes ago</p>
           </div>
-          <p className='font-[800] text-[22px] leading-[26px] text-white px-10 my-8'>SOLANAFIGHTS ⚔️🥊 JOIN liE VERY FIRST TAP-SWAP GAME LIKE HAMSTER KOMBAT ON SOLANA 🔥 TELEGRAM GAME/BOT IS ALREADY LIVE ✅ FAIR LAUNCH IS COMING SOON, DON'T MISS IT ➡️ https://t.me/solanafights</p>
+          <p className='font-[800] text-[22px] leading-[26px] text-white px-10 my-8'>SOLANAFIGHTS ⚔️🥊 JOIN liE VERY FIRST TAP-SWAP GAME LIKE HAMSTER KOMBAT ON SOLANA 🔥 TELEGRAM GAME/BOT IS ALREADY LIVE ✅ FAIR LAUNCH IS COMING SOON, DONT MISS IT ➡️ https://t.me/solanafights</p>
           
         </div>
         <div className='bg-[#111111] rounded-[40px] pb-4'>
@@ -72,7 +72,7 @@ const DetailedBottomView = () => {
             </div>
             <p className='text-primary font-[800] text-[22px] pe-8 pt-2'>21 minutes ago</p>
           </div>
-          <p className='font-[800] text-[22px] leading-[26px] text-white px-10 my-8'>SOLANAFIGHTS ⚔️🥊 JOIN liE VERY FIRST TAP-SWAP GAME LIKE HAMSTER KOMBAT ON SOLANA 🔥 TELEGRAM GAME/BOT IS ALREADY LIVE ✅ FAIR LAUNCH IS COMING SOON, DON'T MISS IT ➡️ https://t.me/solanafights</p>
+          <p className='font-[800] text-[22px] leading-[26px] text-white px-10 my-8'>SOLANAFIGHTS ⚔️🥊 JOIN liE VERY FIRST TAP-SWAP GAME LIKE HAMSTER KOMBAT ON SOLANA 🔥 TELEGRAM GAME/BOT IS ALREADY LIVE ✅ FAIR LAUNCH IS COMING SOON, DONT MISS IT ➡️ https://t.me/solanafights</p>
           
         </div>
         <div className='bg-[#111111] rounded-[40px] pb-4'>
@@ -84,7 +84,7 @@ const DetailedBottomView = () => {
             </div>
             <p className='text-primary font-[800] text-[22px] pe-8 pt-2'>21 minutes ago</p>
           </div>
-          <p className='font-[800] text-[22px] leading-[26px] text-white px-10 my-8'>SOLANAFIGHTS ⚔️🥊 JOIN liE VERY FIRST TAP-SWAP GAME LIKE HAMSTER KOMBAT ON SOLANA 🔥 TELEGRAM GAME/BOT IS ALREADY LIVE ✅ FAIR LAUNCH IS COMING SOON, DON'T MISS IT ➡️ https://t.me/solanafights</p>
+          <p className='font-[800] text-[22px] leading-[26px] text-white px-10 my-8'>SOLANAFIGHTS ⚔️🥊 JOIN liE VERY FIRST TAP-SWAP GAME LIKE HAMSTER KOMBAT ON SOLANA 🔥 TELEGRAM GAME/BOT IS ALREADY LIVE ✅ FAIR LAUNCH IS COMING SOON, DONT MISS IT ➡️ https://t.me/solanafights</p>
           
         </div>
         <div className='bg-[#111111] rounded-[40px] pb-4'>
@@ -96,7 +96,7 @@ const DetailedBottomView = () => {
             </div>
             <p className='text-primary font-[800] text-[22px] pe-8 pt-2'>21 minutes ago</p>
           </div>
-          <p className='font-[800] text-[22px] leading-[26px] text-white px-10 my-8'>SOLANAFIGHTS ⚔️🥊 JOIN liE VERY FIRST TAP-SWAP GAME LIKE HAMSTER KOMBAT ON SOLANA 🔥 TELEGRAM GAME/BOT IS ALREADY LIVE ✅ FAIR LAUNCH IS COMING SOON, DON'T MISS IT ➡️ https://t.me/solanafights</p>
+          <p className='font-[800] text-[22px] leading-[26px] text-white px-10 my-8'>SOLANAFIGHTS ⚔️🥊 JOIN liE VERY FIRST TAP-SWAP GAME LIKE HAMSTER KOMBAT ON SOLANA 🔥 TELEGRAM GAME/BOT IS ALREADY LIVE ✅ FAIR LAUNCH IS COMING SOON, DONT MISS IT ➡️ https://t.me/solanafights</p>
           
         </div>
       

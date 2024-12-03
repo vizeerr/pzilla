@@ -12,7 +12,7 @@ const DetailedRightView = () => {
     const [openSet,setOpenSet] = useState(false)
     const [amt,setAmt] = useState(null)
     const [balance,setBalance] = useState(0.000010)
-
+    
     const [prom,setPromo] = useState(false)
 
   return (

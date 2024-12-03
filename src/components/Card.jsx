@@ -5,7 +5,7 @@ import wlogo from "@/assets/wlogo.svg"
 import pifico from "@/assets/pifico.jpg"
 import Image from "next/image"
 
-const Card = () => {
+const Card = ({data}) => {
   return (
     <div className="bg-white anim rounded-[30px] py-3 px-3 w-[316px] shadow-[8.55px_9.98px_13.61px_0px_#00000040]">
         <div className="flex items-center justify-between">
