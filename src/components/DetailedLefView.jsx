@@ -56,7 +56,7 @@ const DetailedLefView = ({token}) => {
                     <Image src={linkico} alt='' className='anim'/>
                   </div>
                   <div className='flex items-center gap-2'>
-                    <p className='font-[700] tracking-wide text-[16.5px] text-primary mb-1'><span className='opacity-30 text-white '>Contract :</span> TXYpYnL4sp9yWKCcUWfVSodCtfpFkDJQkD</p>
+                    <p className='font-[700] tracking-wide text-[16.5px] text-primary mb-1'><span className='opacity-30 text-white '>Contract :</span> {tokenData.token_address}</p>
                     <Image src={linkico} alt='' className='anim'/>
                   </div>
                 </div>
