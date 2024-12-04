@@ -1,8 +1,6 @@
 import axios from "axios";
+import toast from "react-hot-toast";
 
-
-// const hostName = "http://localhost:3000"
-const hostName = "."
 
 const handleError = (error) => {
   
@@ -18,7 +16,7 @@ const handleError = (error) => {
   
   export const getAllTokens = async () => {
     try {
-      const response = await axios.get(`${hostName}/api/getTokensMock/`);
+      const response = await axios.get(`/api/getTokensMock/`);
       if(response.status===200){
         return response.data.data;
       }
@@ -32,9 +30,9 @@ const handleError = (error) => {
   
   
   export const getToken = async (token) => {
-    console.log(token);
+    
     try {
-      const response = await axios.get(`${hostName}/api/getTokenMock?token_address=${token}`);
+      const response = await axios.get(`/api/getTokenMock?token_address=${token}`);
       if(response.status===200){
         return response.data.data;
       }
