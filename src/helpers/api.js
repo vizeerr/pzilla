@@ -1,7 +1,9 @@
 import axios from "axios";
 
 
-const hostName = "http://localhost:3000"
+// const hostName = "http://localhost:3000"
+const hostName = "."
+
 const handleError = (error) => {
   
     if(!error.response.data.message){
