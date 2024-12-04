@@ -53,11 +53,11 @@ const DetailedLefView = ({token}) => {
                   </div>
                   <div className='flex items-center gap-2 mt-4'>
                     <p className='font-[700] tracking-wide text-[16.5px] mb-1'><span className='opacity-30 '>Created by</span> {shortId(tokenData.creator)}</p>
-                    <Image src={linkico} alt=''/>
+                    <Image src={linkico} alt='' className='anim'/>
                   </div>
                   <div className='flex items-center gap-2'>
                     <p className='font-[700] tracking-wide text-[16.5px] text-primary mb-1'><span className='opacity-30 text-white '>Contract :</span> TXYpYnL4sp9yWKCcUWfVSodCtfpFkDJQkD</p>
-                    <Image src={linkico} alt=''/>
+                    <Image src={linkico} alt='' className='anim'/>
                   </div>
                 </div>
                 
@@ -103,10 +103,10 @@ const DetailedLefView = ({token}) => {
               <p className='bg-[#303236] shadow-[6.35px_6.35px_39.15px_0px_#00000040] mt-[16px] me-[16px] text-primary font-[700] text-[24px] py-[13px] px-[18px] rounded-[18px]'>REFERRAL DASHBOARD</p>
             </div>
             <div className='px-[30px] mt-[38px] flex gap-[31px] items-center'>
-              <p className='font-[400] bg-[#37393D] py-[10px] px-[35px] rounded-[22px]'> <span className='font-bebasneue text-[42px] '> YOUR UNIQUE LINK : </span>   <span className='text-primary font-[700] text-[33px]'> AWEBFSOIWGERGE....1423404599349</span> </p>
-              <div  className='bg-primary  w-[78px] h-[78px] p-[16px] rounded-[22px]'>
+              <p className='font-[400] anim bg-[#37393D] py-[10px] px-[35px] rounded-[22px]'> <span className='font-bebasneue text-[42px] '> YOUR UNIQUE LINK : </span>   <span className='text-primary font-[700] text-[33px]'> AWEBFSOIWGERGE....1423404599349</span> </p>
+              <div  className='bg-primary anim  w-[78px] h-[78px] p-[16px] rounded-[22px]'>
 
-                <Image src={xblack} alt=''/>
+                <Image src={xblack} alt='' />
               </div>
             </div>
             <p className='gradientText font-[500] text-[52px] round mt-5 text-end pe-10'>Earn  weekly  PumpZilla  rewards  through  referrals !</p>

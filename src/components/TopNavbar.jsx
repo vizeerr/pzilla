@@ -9,10 +9,8 @@ import { usePathname } from 'next/navigation'
 
 const TopNavbar = () => {
  
-  const pathname = usePathname()
-  console.log(pathname);
-  
-  
+  const pathname = usePathname()  
+
   return (
     
     <div className="">

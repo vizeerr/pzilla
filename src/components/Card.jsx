@@ -38,7 +38,7 @@ const Card = ({data}) => {
             </div>
         </div>
         <div className="h-[195px] w-[293px] overflow-hidden rounded-3xl mt-3">
-            <Image src={imgUrl(data.image)} width={293} height ={195} alt=""/>
+            <Image src={imgUrl(data.image)} unoptimized={true} width={293} height ={195} alt=""/>
         </div>
         <div className="mt-3">
             <p className="font-bebasneue text-[20px] font-[400] text-[#262626]">{data.name} <span className=" font-[800] font-montserrat ">(PROMOTION)</span></p>

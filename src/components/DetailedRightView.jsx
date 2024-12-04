@@ -29,7 +29,7 @@ const DetailedRightView = () => {
                 <div onClick={()=>setPromo(!prom)} className={`${btnState=="buy"? "block" : "hidden"} bg-[#66666663]  anim w-[128px] text-white text-center rounded-full pt-1`}>
                     <p className='font-bebasneue font-[400]  text-[14px]'>SWITCH TO <span className='text-primary'>{prom?"ETH":"PROMOTION"}</span></p>
                 </div>
-              <Image onClick={()=>{setOpenSet(true)}} src={sett} alt='' className=''/>
+              <Image onClick={()=>{setOpenSet(true)}} src={sett} alt='' className='anim'/>
             </div>
             <SettingModel openSet={openSet} setOpenSet = {setOpenSet} />
 
@@ -49,26 +49,26 @@ const DetailedRightView = () => {
                 <div className='flex justify-between items-center  mt-[60px]'>
                     <div className='flex flex-wrap  gap-2'>
                         <div className='flex gap-2'>
-                            <div className='bg-[#2C2D30] rounded-full w-[75px] text-center py-0.5'>
+                            <div className='bg-[#2C2D30]  anim rounded-full w-[75px] text-center py-0.5'>
                             <p className='font-bebasneue font-[400] text-[15px] opacity-50'>25%</p>
                             </div>
-                            <div className='bg-[#2C2D30] rounded-full w-[75px] text-center py-0.5'>
+                            <div className='bg-[#2C2D30] anim rounded-full w-[75px] text-center py-0.5'>
                             <p className='font-bebasneue font-[400] text-[15px] opacity-50'>50%</p>
                             </div>
                         </div>
                         <div className='flex gap-2 mt-2'>
-                            <div className='bg-[#2C2D30] rounded-full w-[58px] text-center py-0.5'>
+                            <div className='bg-[#2C2D30] anim rounded-full w-[58px] text-center py-0.5'>
                                 <p className='font-bebasneue font-[400] text-[15px] opacity-50'>75%</p>
                             </div>
-                            <div className='bg-[#2C2D30] rounded-full w-[58px] text-center py-0.5'>
+                            <div className='bg-[#2C2D30] anim rounded-full w-[58px] text-center py-0.5'>
                                 <p className='font-bebasneue font-[400] text-[15px] opacity-50'>100%</p>
                             </div>
-                            <div className='bg-[#2C2D30] rounded-full w-[58px] text-center py-0.5'>
+                            <div className='bg-[#2C2D30] anim rounded-full w-[58px] text-center py-0.5'>
                                 <p className='font-bebasneue font-[400] text-[15px] opacity-50'>RESET</p>
                             </div>
                         </div>
                     </div>
-                    <p className='round bg-primary leading-[40px] pt-[12px] text-[#262626] text-[52px] text-center px-[30px] rounded-[15px] shadow-[5.21px_5.21px_7.76px_0px_#00000040]'>
+                    <p className='round anim bg-primary leading-[40px] pt-[12px] text-[#262626] text-[52px] text-center px-[30px] rounded-[15px] shadow-[5.21px_5.21px_7.76px_0px_#00000040]'>
                     SWAP
                     </p>
                 </div>
@@ -93,23 +93,23 @@ const DetailedRightView = () => {
                 <div className='flex justify-between items-center gap-[25px] mt-[30px]'>
                     <div className='flex flex-wrap  gap-2'>
                         <div className='flex gap-2'>
-                            <div className='bg-[#2C2D30] rounded-full w-[75px] text-center py-0.5'>
+                            <div className='bg-[#2C2D30] anim rounded-full w-[75px] text-center py-0.5'>
                             <p className='font-bebasneue font-[400] text-[15px] opacity-50'>RESET</p>
                             </div>
-                            <div className='bg-[#2C2D30] rounded-full w-[75px] text-center py-0.5'>
+                            <div className='bg-[#2C2D30] anim rounded-full w-[75px] text-center py-0.5'>
                             <p className='font-bebasneue font-[400] text-[15px] opacity-50'>0.10 ETH</p>
                             </div>
                         </div>
                         <div className='flex gap-2 mt-2'>
-                            <div className='bg-[#2C2D30] rounded-full w-[75px] text-center py-0.5'>
+                            <div className='bg-[#2C2D30] anim rounded-full w-[75px] text-center py-0.5'>
                                 <p className='font-bebasneue font-[400] text-[15px] opacity-50'>0.05 ETH</p>
                             </div>
-                            <div className='bg-[#2C2D30] rounded-full w-[75px] text-center py-0.5'>
+                            <div className='bg-[#2C2D30] anim rounded-full w-[75px] text-center py-0.5'>
                                 <p className='font-bebasneue font-[400] text-[15px] opacity-50'>0.01 ETH</p>
                             </div>
                         </div>
                     </div>
-                    <p className='round bg-primary leading-[40px] pt-[12px] text-[#262626] text-[52px] text-center px-[30px] rounded-[15px] shadow-[5.21px_5.21px_7.76px_0px_#00000040]'>
+                    <p className='round bg-primary anim leading-[40px] pt-[12px] text-[#262626] text-[52px] text-center px-[30px] rounded-[15px] shadow-[5.21px_5.21px_7.76px_0px_#00000040]'>
                     SWAP
                     </p>
                 </div>
