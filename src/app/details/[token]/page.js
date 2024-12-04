@@ -5,12 +5,13 @@ import DetailedTopView from '@/components/DetailedTopView'
 import DetailedBottomView from '@/components/DetailedBottomView'
 
 
-const page = () => {
+const page = async ({params}) => {
+  
   return (
     <>
       <TopNavbar/>
       <div className='bg-[#111111] p-[20px]'>
-        <DetailedTopView/>
+        <DetailedTopView token ={params.token}/>
         <DetailedBottomView/>
       </div>
     </>

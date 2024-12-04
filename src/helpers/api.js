@@ -28,3 +28,19 @@ const handleError = (error) => {
       
   };
   
+  
+  export const getToken = async (token) => {
+    console.log(token);
+    try {
+      const response = await axios.get(`${hostName}/api/getTokenMock?token_address=${token}`);
+      if(response.status===200){
+        return response.data.data;
+      }
+
+    }catch(error){
+      handleError(error)
+
+    }
+      
+  };
+  

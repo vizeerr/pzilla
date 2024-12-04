@@ -5,12 +5,10 @@ import { getAllTokens } from "@/helpers/api";
 
 const CardGrid = ({ data }) => {
 
-    const[alltokens,setAllTokens] = useState(null)
+    const[allTokens,setAllTokens] = useState([])
 
     const fetchTokens = async() =>{
         const tokens = await getAllTokens()
-        console.log(tokens);
-        
         setAllTokens(tokens);
     }
     useEffect(()=>{
@@ -19,8 +17,9 @@ const CardGrid = ({ data }) => {
 
     return (
         <div className="flex flex-wrap gap-[53px] mt-5 justify-center">
-            {data.map((item, index) => (
-                <Card key={index} item={item} />
+            
+            {allTokens.map((data, index) => (
+                <Card key={index} data={data} />
             ))}
         </div>
     );

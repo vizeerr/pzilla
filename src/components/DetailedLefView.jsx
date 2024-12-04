@@ -1,13 +1,30 @@
+"use client"
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import coimg from "@/assets/coimg.svg"
 import linkico from "@/assets/linkico.svg"
 import xlogo from "@/assets/tlogo.svg"
 import tlogo from "@/assets/xlogo.svg"
 import wlogo from "@/assets/wlogo.svg"
 import xblack from "@/assets/xblack.svg"
+import { getToken } from '@/helpers/api'
+import { formatTime, imgUrl, shortId } from '@/helpers/helpers'
+import Link from 'next/link'
 
-const DetailedLefView = () => {
+const DetailedLefView = ({token}) => {
+  const [tokenData,setTokenData] = useState({});
+  const fetchToken = async() =>{
+    const data = await getToken(token);
+    setTokenData(data)
+  }
+  
+  
+  
+  useEffect(()=>{
+    fetchToken();
+  },[])
+
+
   return (
     <div className='flex flex-col gap-[32px] '>
           
@@ -15,21 +32,27 @@ const DetailedLefView = () => {
             <div className='flex justify-between items-start'>
               <div className='flex items-center gap-[33px]'>
                 <div className='rounded-[21.16px] relative overflow-hidden'>
-                  <Image src={coimg} alt="" />
+                  <Image src={imgUrl(tokenData.image) || ""} unoptimized={true} width={216} height={210} alt="" />
                   <div className='bg-[#0A0A0B] flex justify-around w-full py-[8px] absolute bottom-0 z-20'>
+                  <Link href={tokenData.website || ""}>
                     <Image src = {wlogo} alt=''/>
+                  </Link>
+                  <Link href={tokenData.twitter || ""}>
                     <Image src = {xlogo} alt=''/>
+                  </Link>
+                  <Link href={tokenData.telegram || ""}>
                     <Image src = {tlogo} alt=''/>
+                  </Link>
 
                   </div>
                 </div>
                 <div>
                   <div className='flex gap-2 items-center'>
-                    <h1 className='text-[37px]  font-[400] font-bebasneue'>CAT SWAP PROMOTION </h1>
+                    <h1 className='text-[37px]  font-[400] font-bebasneue'>{tokenData.name} </h1>
                     <p className='text-[26px] font-montserrat font-[900] text-primary'>($ PROMOTION)</p>
                   </div>
                   <div className='flex items-center gap-2 mt-4'>
-                    <p className='font-[700] tracking-wide text-[16.5px] mb-1'><span className='opacity-30 '>Created by</span> 34gfj48th</p>
+                    <p className='font-[700] tracking-wide text-[16.5px] mb-1'><span className='opacity-30 '>Created by</span> {shortId(tokenData.creator)}</p>
                     <Image src={linkico} alt=''/>
                   </div>
                   <div className='flex items-center gap-2'>
@@ -46,8 +69,9 @@ const DetailedLefView = () => {
                 <p className='font-[800] text-[46px]'>$ 54,124</p>
               </div>
             </div>
-            <p className='font-[600] mt-4 opacity-45 text-[19px] leading-[23px]'>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <div className='flex justify-between mt-10'>
+            <p className='font-[600] mt-4 opacity-45 text-[19px] leading-[23px]'>{tokenData.description}</p>
+            <div className='flex justify-between mt-10 gap-[18px]'>
+             
               <div className='bg-[#363A40] w-[428px] rounded-[28.5px] p-[25px] shadow-[7.41px_7.41px_26.45px_0px_#00000040]'>
                 <p className='capitalize font-bebasneue font-[400] text-[44px]'>Price</p>
                 <p className='text-primary font-[800] text-[32px]'>0.000000000025 ETH</p>
@@ -58,7 +82,7 @@ const DetailedLefView = () => {
               </div>
               <div className='bg-[#363A40] w-[428px] rounded-[28.5px] p-[25px] shadow-[7.41px_7.41px_26.45px_0px_#00000040]'>
                 <p className='capitalize font-bebasneue font-[400] text-[44px]'>Token created</p>
-                <p className='text-primary font-[800] text-[32px]'>1h 47min <span className='text-white'>ago</span></p>
+                <p className='text-primary font-[800] text-[32px]'>{formatTime(tokenData.created_at)} <span className='text-white'>ago</span></p>
               </div>
             </div>
 
