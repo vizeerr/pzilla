@@ -99,7 +99,7 @@ const DetailedLefView = ({token}) => {
           </div>
 
          
-          <div className='bg-[#1B1C1E]  h-[610px] shadow-[12.7px_12.7px_44.02px_0px_#0000004F] rounded-[40px]'>
+          <div className='bg-[#1B1C1E]  h-[620px] shadow-[12.7px_12.7px_44.02px_0px_#0000004F] rounded-[40px]'>
           <div className='bg-primary w-[349px] text-center py-[15px] rounded-[40px_0px] text-[#1B1C1E] shadow-[6.51px_6.51px_15.63px_0px_#0000005C]'>
                 <p className='text-[25px] font-[800]'>GRAPHICAL VIEW</p>
                 
