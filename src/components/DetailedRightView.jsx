@@ -3,7 +3,7 @@ import Image from 'next/image'
 import React, { useState } from 'react'
 import sett from "@/assets/sett.svg"
 import bgwall from "@/assets/bgwall.svg"
-import eth from "@/assets/eth.svg"
+import eth from "@/assets/eth.png"
 import SettingModel from './SettingModel'
 
 
@@ -20,8 +20,8 @@ const DetailedRightView = () => {
         <div className='flex flex-col gap-[32px] '>
           <div className='bg-[#1B1C1E] relative p-[32px] shadow-[12.7px_12.7px_44.02px_0px_#0000004F] rounded-[40px]'>
             <div className='gap-[23px] flex'>
-              <button onClick={()=>setBtnState('buy')} className= {`${btnState=="buy"? "bg-primary text-[#1B1C1E]" :"text-[#666666] bg-[#2C2D30]"} border-0  anim w-[175px] py-[10px]   shadow-[4.23px_4.23px_11.96px_0px_#00000054] rounded-[18px] font-[800] text-[21px]`}> BUY</button>
-              <button  onClick={()=>setBtnState('sell')} className= {`${btnState=="sell"? "bg-primary text-[#1B1C1E]" :"text-[#666666] bg-[#2C2D30]"} border-0  anim w-[175px] py-[10px]   shadow-[4.23px_4.23px_11.96px_0px_#00000054] rounded-[18px] font-[800] text-[21px]`}> SELL</button>
+              <button onClick={()=>setBtnState('buy')} className= {`${btnState=="buy"? "bg-primary text-[#1B1C1E]" :"text-[#666666] bg-[#2C2D30]"} border-0  anim w-full py-[10px]   shadow-[4.23px_4.23px_11.96px_0px_#00000054] rounded-[18px] font-[800] text-[21px]`}> BUY</button>
+              <button  onClick={()=>setBtnState('sell')} className= {`${btnState=="sell"? "bg-primary text-[#1B1C1E]" :"text-[#666666] bg-[#2C2D30]"} border-0  anim w-full py-[10px]   shadow-[4.23px_4.23px_11.96px_0px_#00000054] rounded-[18px] font-[800] text-[21px]`}> SELL</button>
 
             </div>
 
@@ -47,28 +47,28 @@ const DetailedRightView = () => {
                 </div> 
                 
                 <div className='flex justify-between items-center  mt-[60px]'>
-                    <div className='flex flex-wrap  gap-2'>
+                    <div className='flex flex-wrap  gap-[5px]'>
                         <div className='flex gap-2'>
-                            <div className='bg-[#2C2D30]  anim rounded-full w-[75px] text-center py-0.5'>
+                            <div className='bg-[#2C2D30]  anim rounded-full w-[68px] text-center pt-[3px] '>
                             <p className='font-bebasneue font-[400] text-[15px] opacity-50'>25%</p>
                             </div>
-                            <div className='bg-[#2C2D30] anim rounded-full w-[75px] text-center py-0.5'>
+                            <div className='bg-[#2C2D30] anim rounded-full w-[68px] text-center pt-[3px]'>
                             <p className='font-bebasneue font-[400] text-[15px] opacity-50'>50%</p>
                             </div>
                         </div>
-                        <div className='flex gap-2 mt-2'>
-                            <div className='bg-[#2C2D30] anim rounded-full w-[58px] text-center py-0.5'>
+                        <div className='flex gap-2 '>
+                            <div className='bg-[#2C2D30] anim rounded-full w-[68px] text-center pt-[3px]'>
                                 <p className='font-bebasneue font-[400] text-[15px] opacity-50'>75%</p>
                             </div>
-                            <div className='bg-[#2C2D30] anim rounded-full w-[58px] text-center py-0.5'>
+                            <div className='bg-[#2C2D30] anim rounded-full w-[68px] text-center pt-[3px]'>
                                 <p className='font-bebasneue font-[400] text-[15px] opacity-50'>100%</p>
                             </div>
-                            <div className='bg-[#2C2D30] anim rounded-full w-[58px] text-center py-0.5'>
+                            <div className='bg-[#2C2D30] anim rounded-full w-[68px] text-center pt-[3px]'>
                                 <p className='font-bebasneue font-[400] text-[15px] opacity-50'>RESET</p>
                             </div>
                         </div>
                     </div>
-                    <p className='round anim bg-primary leading-[40px] pt-[12px] text-[#262626] text-[52px] text-center px-[30px] rounded-[15px] shadow-[5.21px_5.21px_7.76px_0px_#00000040]'>
+                    <p className='round anim bg-primary leading-[40px] pt-[12px] text-[#262626] text-[52px] text-center px-[35px] rounded-[15px] shadow-[5.21px_5.21px_7.76px_0px_#00000040]'>
                     SWAP
                     </p>
                 </div>
@@ -83,7 +83,7 @@ const DetailedRightView = () => {
                         <p className=' opacity-30 text-[10px] font-[400]'>User balance : {balance} {prom? "PROMOTION":"ETH"}</p>
                     </div>
                     <div className='w-[49px] h-[49px] rounded-full overflow-hidden'>
-                        <Image src={eth} alt=''/>
+                        <Image src={eth } alt=''/>
                     </div>
                 </div>
                 <div className='flex justify-between mt-[20px] items-center'>
@@ -91,25 +91,25 @@ const DetailedRightView = () => {
                     <p className={`${amt>balance? "block" :"hidden"} font-bebasneue text-[15px] text-[#FF2F61]`}>insufficient balance</p>
                 </div>
                 <div className='flex justify-between items-center gap-[25px] mt-[30px]'>
-                    <div className='flex flex-wrap  gap-2'>
+                    <div className='flex flex-wrap  gap-[5px]'>
                         <div className='flex gap-2'>
-                            <div className='bg-[#2C2D30] anim rounded-full w-[75px] text-center py-0.5'>
+                            <div className='bg-[#2C2D30] anim rounded-full w-[68px] text-center pt-[3px]'>
                             <p className='font-bebasneue font-[400] text-[15px] opacity-50'>RESET</p>
                             </div>
-                            <div className='bg-[#2C2D30] anim rounded-full w-[75px] text-center py-0.5'>
+                            <div className='bg-[#2C2D30] anim rounded-full w-[68px] text-center pt-[3px]'>
                             <p className='font-bebasneue font-[400] text-[15px] opacity-50'>0.10 ETH</p>
                             </div>
                         </div>
-                        <div className='flex gap-2 mt-2'>
-                            <div className='bg-[#2C2D30] anim rounded-full w-[75px] text-center py-0.5'>
+                        <div className='flex gap-2'>
+                            <div className='bg-[#2C2D30] anim rounded-full w-[68px] text-center pt-[3px]'>
                                 <p className='font-bebasneue font-[400] text-[15px] opacity-50'>0.05 ETH</p>
                             </div>
-                            <div className='bg-[#2C2D30] anim rounded-full w-[75px] text-center py-0.5'>
+                            <div className='bg-[#2C2D30] anim rounded-full w-[68px] text-center pt-[3px]'>
                                 <p className='font-bebasneue font-[400] text-[15px] opacity-50'>0.01 ETH</p>
                             </div>
                         </div>
                     </div>
-                    <p className='round bg-primary anim leading-[40px] pt-[12px] text-[#262626] text-[52px] text-center px-[30px] rounded-[15px] shadow-[5.21px_5.21px_7.76px_0px_#00000040]'>
+                    <p className='round bg-primary anim leading-[40px] pt-[12px] text-[#262626] text-[52px] text-center px-[35px] rounded-[15px] shadow-[5.21px_5.21px_7.76px_0px_#00000040]'>
                     SWAP
                     </p>
                 </div>
@@ -125,13 +125,13 @@ const DetailedRightView = () => {
               </div>
             </div>
 
-            <div className='flex justify-between items-center mt-4'>
+            <div className='flex justify-between items-center mt-4 px-1'>
               <p className='font-bebasneue text-[21px]'>BONDING CURVE PROGRESS</p>
-              <p className='text-primary text-[21px] font-[700]'>0.86%</p>
+              <p className='text-primary text-[21px] font-[700] font-montserrat'>0.86%</p>
             </div>
 
-            <div className='bg-[#111111] shadow-[8.47px_9.52px_17.57px_0px_#00000040]  w-[407px]  mt-5 rounded-[32px] px-[30px] py-[30px]'>
-              <p className='font-[700] text-[16px] text-center leading-[23px]'>
+            <div className='bg-[#111111] shadow-[8.47px_9.52px_17.57px_0px_#00000040]  w-[407px] mt-3  rounded-[32px] px-[30px] py-[30px]'>
+              <p className='font-[700] text-[16px] text-center leading-[18px]'>
                 
                 There are <span className='text-primary font-[900]'>676,991,162.93 PROMOTION 
                 tokens and 4,546.3 ETH still available in 
@@ -139,7 +139,7 @@ const DetailedRightView = () => {
               
               </p>
 
-              <p className='font-[700] text-[16px] text-center mt-5 leading-[23px]'>
+              <p className='font-[700] text-[16px] text-center mt-5 leading-[18px]'>
                 When the market cap reaches <span className='text-primary font-[900]'>$77,296.81</span>,
                 all liquidity from the bonding curve will be 
                 moved to UNISWAP and locked.<span className='text-primary font-[900]'> This 
@@ -161,7 +161,7 @@ const DetailedRightView = () => {
 
                 </div>
               </div>
-              <p className='text-[15px] font-[900] text-center mt-4'>Dethrone <span className='font-[700] opacity-40'>the current king at </span> <span className='text-primary'>$43,134 market cap.</span></p>
+              <p className='text-[15px] font-montserrat font-[900] text-center mt-4'>Dethrone <span className='font-[700] opacity-40'>the current king at </span> <span className='text-primary font-[900] font-montserrat'>$43,134 market cap.</span></p>
             </div>
           </div>
           

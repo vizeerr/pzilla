@@ -10,6 +10,7 @@ import xblack from "@/assets/xblack.svg"
 import { getToken } from '@/helpers/api'
 import { formatTime, imgUrl, shortId } from '@/helpers/helpers'
 import Link from 'next/link'
+import toast from 'react-hot-toast'
 
 const DetailedLefView = ({token}) => {
   const [tokenData,setTokenData] = useState({});
@@ -18,6 +19,15 @@ const DetailedLefView = ({token}) => {
     setTokenData(data)
   }
   
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText('AWEBFSOIWGERGE5566544551423404599349');
+      toast.success("Unique Link Copied")
+    } catch (err) {
+      console.error('Failed to copy text: ', err);
+    }
+  };
   
   
   useEffect(()=>{
@@ -28,7 +38,7 @@ const DetailedLefView = ({token}) => {
   return (
     <div className='flex flex-col gap-[32px] '>
           
-          <div className='bg-[#1B1C1E] p-[30px] shadow-[12.7px_12.7px_44.02px_0px_#0000004F] rounded-[40px]'>
+          <div className='bg-[#1B1C1E] p-[30px] h-[586px] flex flex-col justify-between shadow-[12.7px_12.7px_44.02px_0px_#0000004F] rounded-[40px]'>
             <div className='flex justify-between items-start'>
               <div className='flex items-center gap-[33px]'>
                 <div className='rounded-[21.16px] relative overflow-hidden'>
@@ -89,7 +99,7 @@ const DetailedLefView = ({token}) => {
           </div>
 
          
-          <div className='bg-[#1B1C1E]  h-[621px] shadow-[12.7px_12.7px_44.02px_0px_#0000004F] rounded-[40px]'>
+          <div className='bg-[#1B1C1E]  h-[610px] shadow-[12.7px_12.7px_44.02px_0px_#0000004F] rounded-[40px]'>
           <div className='bg-primary w-[349px] text-center py-[15px] rounded-[40px_0px] text-[#1B1C1E] shadow-[6.51px_6.51px_15.63px_0px_#0000005C]'>
                 <p className='text-[25px] font-[800]'>GRAPHICAL VIEW</p>
                 
@@ -103,7 +113,7 @@ const DetailedLefView = ({token}) => {
               <p className='bg-[#303236] shadow-[6.35px_6.35px_39.15px_0px_#00000040] mt-[16px] me-[16px] text-primary font-[700] text-[24px] py-[13px] px-[18px] rounded-[18px]'>REFERRAL DASHBOARD</p>
             </div>
             <div className='px-[30px] mt-[38px] flex gap-[31px] items-center'>
-              <p className='font-[400] anim bg-[#37393D] py-[10px] px-[35px] rounded-[22px]'> <span className='font-bebasneue text-[42px] '> YOUR UNIQUE LINK : </span>   <span className='text-primary font-[700] text-[33px]'> AWEBFSOIWGERGE....1423404599349</span> </p>
+              <p className='font-[400] anim bg-[#37393D] py-[10px] px-[35px] rounded-[22px]' onClick={handleCopy}> <span className='font-bebasneue text-[42px] '> YOUR UNIQUE LINK : </span>   <span className='text-primary font-[700] text-[33px]'> AWEBFSOIWGERGE....1423404599349</span> </p>
               <div  className='bg-primary anim  w-[78px] h-[78px] p-[16px] rounded-[22px]'>
 
                 <Image src={xblack} alt='' />

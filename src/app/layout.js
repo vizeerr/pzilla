@@ -1,3 +1,4 @@
+import { Toaster } from "react-hot-toast";
 import "./globals.css";
 import {Bebas_Neue , Montserrat } from 'next/font/google'
  
@@ -8,7 +9,7 @@ export const bebasneue = Bebas_Neue({
 })
  
 export const montserrat = Montserrat({
-  subsets: ['latin'],
+  subsets: ['cyrillic'],
   variable: '--font-mont',
   weight:['100','200','300','400','500','600','700','800','900']
 })
@@ -23,6 +24,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${bebasneue.variable}`}>
         {children}
+        <Toaster
+  position="top-center"
+  reverseOrder={false}
+/>
       </body>
     </html>
   );
