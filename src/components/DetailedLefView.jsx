@@ -59,7 +59,7 @@ const DetailedLefView = ({token}) => {
                 <div>
                   <div className='flex gap-2 items-center'>
                     <h1 className='text-[37px]  font-[400] font-bebasneue'>{tokenData.name} </h1>
-                    <p className='text-[26px] font-montserrat font-[900] text-primary'>($ PROMOTION)</p>
+                    <p className='text-[26px] font-montserrat font-[900] text-primary'>($ {tokenData.symbol})</p>
                   </div>
                   <div className='flex items-center gap-2 mt-4'>
                     <p className='font-[700] tracking-wide text-[16.5px] mb-1'><span className='opacity-30 '>Created by</span> {shortId(tokenData.creator)}</p>
@@ -123,7 +123,7 @@ const DetailedLefView = ({token}) => {
 
           </div>
 
-        </div>
+    </div>
   )
 }
 

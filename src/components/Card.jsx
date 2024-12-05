@@ -41,7 +41,7 @@ const Card = ({data}) => {
             <Image src={imgUrl(data.image)} unoptimized={true} width={293} height ={195} alt=""/>
         </div>
         <div className="mt-3">
-            <p className="font-bebasneue text-[20px] font-[400] text-[#262626]">{data.name} <span className=" font-[800] font-montserrat ">(PROMOTION)</span></p>
+            <p className="font-bebasneue text-[20px] font-[400] text-[#262626]">{data.name} <span className=" font-[800] font-montserrat ">({data.symbol})</span></p>
            <p className="font-montserrat text-[#262626B5] font-[700] text-[12px]">Created by {shortId(data.creator)}</p>
         </div>
         <div className="mt-3">
