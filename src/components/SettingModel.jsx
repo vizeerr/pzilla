@@ -30,19 +30,29 @@ const SettingModel = ({openSet,setOpenSet}) => {
         {/* <p className={` text-[#FF003D] text-[13px] leading-[16px] text-center mb-[28px] shadow-[0px_0.83px_0.83px_0px_#00000040]`}>Caution: Slippage above 10% may result in significant deviations in the transaction price. Please proceed with caution.</p>
          */}
 
-{/* <AnimatePresence> */}
+<AnimatePresence>
             {opt > 1 && (
+              <motion.div
+              key="caution"
+     initial={{ opacity:0,height: 0  }} // Start from left
+     animate={{ opacity:1,height: opt > 1 ? 92 : 0}}
+     exit={{opacity:0,height:0}} // Move to center when open
+    transition={{ duration: 0.3 }}
+              className=' overflow-hidden'>
+
+              
               <p
                 
-                className="text-[#FF003D] font-[700] text-[13px] leading-[16px] text-center mb-[28px] "
+                className="text-[#FF003D] h-[0] font-[700]  text-[13px] leading-[16px] text-center mb-[28px] "
               >
                 Caution: Slippage above 10% may result in significant deviations
                 in the transaction price. Please proceed with caution.
               </p>
+              </motion.div>
             )}
-          {/* </AnimatePresence> */}
+          </AnimatePresence>
 
-        <div className='flex justify-center'>
+        <div className='flex justify-center '>
 
             <button onClick={()=>setOpenSet(false)} className='text-[#262626] anim bg-primary rounded-full font-[900] text-[18.5px] w-[122px]'>SAVE</button>
         </div>
