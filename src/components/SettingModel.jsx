@@ -13,7 +13,7 @@ const SettingModel = ({openSet,setOpenSet}) => {
     <motion.div
      key="setting-modal"
      initial={{  x: 350,height: 160  }} // Start from left
-     animate={{  x: 0 ,height: opt > 1 ? 235 : 160,}} // Move to center when open
+     animate={{  x: 0 ,height: opt > 1 ? 250 : 160,}} // Move to center when open
     exit={{  x: 350 }} 
     transition={{ duration: 0.3 }} className={`font-montserrat absolute end-5 z-20 w-[304px] px-[20px] pt-[8px] pb-[14px] bg-[#2C2D30] rounded-[32px]`}>
         <div className='flex items-center justify-between'>
@@ -34,7 +34,7 @@ const SettingModel = ({openSet,setOpenSet}) => {
             {opt > 1 && (
               <p
                 
-                className="text-[#FF003D] text-[13px] leading-[16px] text-center mb-[28px] shadow-[0px_0.83px_0.83px_0px_#00000040]"
+                className="text-[#FF003D] font-[700] text-[13px] leading-[16px] text-center mb-[28px] "
               >
                 Caution: Slippage above 10% may result in significant deviations
                 in the transaction price. Please proceed with caution.
@@ -42,7 +42,7 @@ const SettingModel = ({openSet,setOpenSet}) => {
             )}
           {/* </AnimatePresence> */}
 
-        <div className='flex justify-center relative bottom-0 tranis'>
+        <div className='flex justify-center'>
 
             <button onClick={()=>setOpenSet(false)} className='text-[#262626] anim bg-primary rounded-full font-[900] text-[18.5px] w-[122px]'>SAVE</button>
         </div>
