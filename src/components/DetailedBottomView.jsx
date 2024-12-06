@@ -15,10 +15,10 @@ const DetailedBottomView = () => {
 
 
   return (
-    <div className='bg-[#1B1C1E] mt-[32px]'>
+    <div className='bg-[#1B1C1E] mt-[32px] '>
         <div className='flex justify-between'>
-          <p onClick={()=>setTab("cmmt")} className={`${tab=="cmmt"? "bg-primary text-[#262626]":" bg-[#38383F] text-white"} font-[900] text-[30px]   py-5 w-[349px] text-center rounded-[40px_0px]`}> COMMENTS</p>
-          <p onClick={()=>setTab("his")} className={`${tab=="his"? "bg-primary text-[#262626]":" bg-[#38383F] text-white"} font-[800] text-[30px]    py-5 w-[420px] text-center rounded-[0px_40px]`}> TRADING HISTORY</p>
+          <p onClick={()=>setTab("cmmt")} className={`${tab=="cmmt"? "bg-primary text-[#262626]":" bg-[#38383F] text-white"} font-[900] text-[30px] font-montserrat   py-5 w-[349px] text-center rounded-[40px_0px]`}> COMMENTS</p>
+          <p onClick={()=>setTab("his")} className={`${tab=="his"? "bg-primary text-[#262626]":" bg-[#38383F] text-white"} font-[800] text-[30px]  font-montserrat  py-5 w-[420px] text-center rounded-[0px_40px]`}> TRADING HISTORY</p>
            
         </div>
         <div className='h-[818px]'>
@@ -39,7 +39,7 @@ const DetailedBottomView = () => {
               <p className='font-bebasneue font-[400] text-[34px] text-white opacity-30'>0/256</p>
               <div className='flex gap-8 items-center'>
                 <Image src={smile} alt=''/>
-                <button className='border-0 bg-primary text-[#262626] text-[28px] font-[800] px-8 py-1 rounded-[20px]'>SUBMIT</button>
+                <button className='border-0 bg-primary font-montserrat text-[#262626] text-[28px] font-[800] px-8 py-1 rounded-[20px]'>SUBMIT</button>
               </div>
             </div>
           </div>
@@ -54,9 +54,9 @@ const DetailedBottomView = () => {
                   <p className='font-[800] text-primary text-[15px]'>DEV</p>
                 </div>
               </div>
-              <p className='text-primary font-[800] text-[22px] pe-8 pt-2'>21 minutes ago</p>
+              <p className='text-primary font-[800] text-[22px] pe-8 pt-2 font-montserrat'>21 minutes ago</p>
             </div>
-            <p className='font-[800] text-[22px] leading-[26px] text-white px-10 my-8'>SOLANAFIGHTS ⚔️🥊 JOIN liE VERY FIRST TAP-SWAP GAME LIKE HAMSTER KOMBAT ON SOLANA 🔥 TELEGRAM GAME/BOT IS ALREADY LIVE ✅ FAIR LAUNCH IS COMING SOON, DONT MISS IT ➡️ https://t.me/solanafights</p>
+            <p className='font-[800] text-[22px] leading-[26px] text-white px-10 my-8 font-montserrat'>SOLANAFIGHTS ⚔️🥊 JOIN liE VERY FIRST TAP-SWAP GAME LIKE HAMSTER KOMBAT ON SOLANA 🔥 TELEGRAM GAME/BOT IS ALREADY LIVE ✅ FAIR LAUNCH IS COMING SOON, DONT MISS IT ➡️ https://t.me/solanafights</p>
             
           </div>
   
@@ -67,9 +67,9 @@ const DetailedBottomView = () => {
                 
               
               </div>
-              <p className='text-primary font-[800] text-[22px] pe-8 pt-2'>21 minutes ago</p>
+              <p className='text-primary font-[800] text-[22px] pe-8 pt-2 font-montserrat' >21 minutes ago</p>
             </div>
-            <p className='font-[800] text-[22px] leading-[26px] text-white px-10 my-8'>SOLANAFIGHTS ⚔️🥊 JOIN liE VERY FIRST TAP-SWAP GAME LIKE HAMSTER KOMBAT ON SOLANA 🔥 TELEGRAM GAME/BOT IS ALREADY LIVE ✅ FAIR LAUNCH IS COMING SOON, DONT MISS IT ➡️ https://t.me/solanafights</p>
+            <p className='font-montserrat font-[800] text-[22px] leading-[26px] text-white px-10 my-8'>SOLANAFIGHTS ⚔️🥊 JOIN liE VERY FIRST TAP-SWAP GAME LIKE HAMSTER KOMBAT ON SOLANA 🔥 TELEGRAM GAME/BOT IS ALREADY LIVE ✅ FAIR LAUNCH IS COMING SOON, DONT MISS IT ➡️ https://t.me/solanafights</p>
             
           </div>
           <div className='bg-[#111111] rounded-[40px] pb-4'>
@@ -79,9 +79,9 @@ const DetailedBottomView = () => {
                 
               
               </div>
-              <p className='text-primary font-[800] text-[22px] pe-8 pt-2'>21 minutes ago</p>
+              <p className='text-primary font-[800] text-[22px] pe-8 pt-2 font-montserrat'>21 minutes ago</p>
             </div>
-            <p className='font-[800] text-[22px] leading-[26px] text-white px-10 my-8'>SOLANAFIGHTS ⚔️🥊 JOIN liE VERY FIRST TAP-SWAP GAME LIKE HAMSTER KOMBAT ON SOLANA 🔥 TELEGRAM GAME/BOT IS ALREADY LIVE ✅ FAIR LAUNCH IS COMING SOON, DONT MISS IT ➡️ https://t.me/solanafights</p>
+            <p className='font-montserrat font-[800] text-[22px] leading-[26px] text-white px-10 my-8'>SOLANAFIGHTS ⚔️🥊 JOIN liE VERY FIRST TAP-SWAP GAME LIKE HAMSTER KOMBAT ON SOLANA 🔥 TELEGRAM GAME/BOT IS ALREADY LIVE ✅ FAIR LAUNCH IS COMING SOON, DONT MISS IT ➡️ https://t.me/solanafights</p>
             
           </div>
           <div className='bg-[#111111] rounded-[40px] pb-4'>
@@ -91,9 +91,9 @@ const DetailedBottomView = () => {
                 
               
               </div>
-              <p className='text-primary font-[800] text-[22px] pe-8 pt-2'>21 minutes ago</p>
+              <p className='text-primary font-[800] text-[22px] pe-8 pt-2 font-montserrat'>21 minutes ago</p>
             </div>
-            <p className='font-[800] text-[22px] leading-[26px] text-white px-10 my-8'>SOLANAFIGHTS ⚔️🥊 JOIN liE VERY FIRST TAP-SWAP GAME LIKE HAMSTER KOMBAT ON SOLANA 🔥 TELEGRAM GAME/BOT IS ALREADY LIVE ✅ FAIR LAUNCH IS COMING SOON, DONT MISS IT ➡️ https://t.me/solanafights</p>
+            <p className='font-montserrat font-[800] text-[22px] leading-[26px] text-white px-10 my-8'>SOLANAFIGHTS ⚔️🥊 JOIN liE VERY FIRST TAP-SWAP GAME LIKE HAMSTER KOMBAT ON SOLANA 🔥 TELEGRAM GAME/BOT IS ALREADY LIVE ✅ FAIR LAUNCH IS COMING SOON, DONT MISS IT ➡️ https://t.me/solanafights</p>
             
           </div>
           <div className='bg-[#111111] rounded-[40px] pb-4'>
@@ -103,9 +103,9 @@ const DetailedBottomView = () => {
                 
               
               </div>
-              <p className='text-primary font-[800] text-[22px] pe-8 pt-2'>21 minutes ago</p>
+              <p className='text-primary font-[800] text-[22px] pe-8 pt-2 font-montserrat'>21 minutes ago</p>
             </div>
-            <p className='font-[800] text-[22px] leading-[26px] text-white px-10 my-8'>SOLANAFIGHTS ⚔️🥊 JOIN liE VERY FIRST TAP-SWAP GAME LIKE HAMSTER KOMBAT ON SOLANA 🔥 TELEGRAM GAME/BOT IS ALREADY LIVE ✅ FAIR LAUNCH IS COMING SOON, DONT MISS IT ➡️ https://t.me/solanafights</p>
+            <p className='font-montserrat font-[800] text-[22px] leading-[26px] text-white px-10 my-8'>SOLANAFIGHTS ⚔️🥊 JOIN liE VERY FIRST TAP-SWAP GAME LIKE HAMSTER KOMBAT ON SOLANA 🔥 TELEGRAM GAME/BOT IS ALREADY LIVE ✅ FAIR LAUNCH IS COMING SOON, DONT MISS IT ➡️ https://t.me/solanafights</p>
             
           </div>
         
@@ -147,24 +147,24 @@ const DetailedBottomView = () => {
           </div>
           
           <div className=' rounded-[40px_40px_0px_0px] overflow-x-hidden'>
-            <table className="w-full text-[32px]  font-[800] border-collapse border-spacing-0">
+            <table className="w-full text-[32px] font-montserrat font-[800] border-collapse border-spacing-0">
             <thead className="uppercase ">
               <tr className="text-white text-opacity-40 bg-[#38383F] sticky top-[-1px] m-0 border-none shadow-none">
                 <th>ACCOUNT</th>
                 <th>TYPE</th>
-                <th>ETH</th>
+                <th >ETH</th>
                 <th>PROMOTION</th>
                 <th>DATE</th>
                 <th>TRANSACTION</th>
               </tr>
             </thead>
-            <tbody className=" bg-[#111111]">
+            <tbody className=" bg-[#111111] font-montserrat">
             {[...Array(18)].map((_, index) => (
               <tr key={index} className="text-white">
                 <td className="font-[700] w-[300px] text-center">TEG3....4efD</td>
                 <td className="text-[#FFFF00] w-[200px] text-center">SELL</td>
-                <td className="font-[700] w-[200px] text-center">12,3456</td>
-                <td className='w-[300px] text-center'>571,201.94</td>
+                <td className="font-[700]  w-[200px] text-center">12,3456</td>
+                <td className='w-[300px] font-[800] text-center'>571,201.94</td>
                 <td className="font-[700] w-[200px] text-center">1 min ago</td>
                 <td className="text-primary font-[700] w-[400px]  text-center">38HFH38RH..5347</td>
               </tr>
