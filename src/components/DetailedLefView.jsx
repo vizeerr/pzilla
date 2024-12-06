@@ -38,7 +38,7 @@ const DetailedLefView = ({token}) => {
   return (
     <div className='flex flex-col gap-[32px] '>
           
-          <div className='bg-[#1B1C1E] p-[30px] h-[586px] flex flex-col justify-between shadow-[12.7px_12.7px_44.02px_0px_#0000004F] rounded-[40px]'>
+          <div className='bg-[#1B1C1E] p-[30px] h-[578px] flex flex-col justify-between shadow-[12.7px_12.7px_44.02px_0px_#0000004F] rounded-[40px]'>
             <div className='flex justify-between items-start'>
               <div className='flex items-center gap-[33px]'>
                 <div className='rounded-[21.16px] relative overflow-hidden'>

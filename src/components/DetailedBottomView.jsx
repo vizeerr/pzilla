@@ -5,6 +5,8 @@ import pin from "@/assets/pin.svg"
 import eth from "@/assets/eth.svg"
 import Image from 'next/image'
 
+import { AnimatePresence, motion } from "framer-motion";
+import { Anuphan } from 'next/font/google'
 const DetailedBottomView = () => {
 
   const [tab,setTab] = useState("cmmt")
@@ -19,8 +21,15 @@ const DetailedBottomView = () => {
           <p onClick={()=>setTab("his")} className={`${tab=="his"? "bg-primary text-[#262626]":" bg-[#38383F] text-white"} font-[800] text-[30px]    py-5 w-[420px] text-center rounded-[0px_40px]`}> TRADING HISTORY</p>
            
         </div>
-
-        {tab=="cmmt"? <div className='mt-[60px] h-[758px] overflow-y-auto pb-[40px] px-[40px] flex flex-col gap-[32px]'>
+        <AnimatePresence mode="wait">
+        {tab=="cmmt"? 
+        <motion.div 
+        key="cmmont" 
+      initial={{ opacity: 0}}
+      animate={{ opacity: 1}}
+      exit={{ opacity: 0}}
+      transition={{ duration: 0.3 }}
+        className='mt-[60px] h-[758px] overflow-y-auto pb-[40px] px-[40px] flex flex-col gap-[32px]'>
         
         <div className='bg-[#111111] rounded-[40px]'>
           <p className='font-[900] text-[28px] text-[#111111] bg-white  py-2 w-[288px] text-center rounded-[50px_0px]'> Your ID</p>
@@ -100,14 +109,21 @@ const DetailedBottomView = () => {
           
         </div>
       
-      </div>
+        </motion.div>
       : 
-      <div className='mt-[60px] h-[758px] overflow-y-auto pb-[1px] px-[40px] flex flex-col gap-[32px]'>
+      
+      <motion.div 
+      key="trading-history" 
+      initial={{ opacity: 0, x: 250 }}
+      animate={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0, x: 250 }}
+      transition={{ duration: 0.3 }}
+      className='mt-[60px] h-[758px] overflow-y-auto pb-[1px] px-[40px] flex flex-col gap-[32px]'>
       <div className='flex gap-8 items-center'>
         <div className='bg-[#111111] px-[30px] py-[22px] rounded-[23px] flex gap-8 shadow-[10px_10px_23px_0px_#0000004D]'>
           <p className='uppercase text-white  font-[800]  text-[21px] '>Filter By Size</p>
-          <div onClick={()=>setToogle(!toogle)} className={`${toogle? "bg-primary justify-end" : "bg-[#18191B] justify-start" } w-[87px] flex items-center  rounded-[29px] h-[29px] `}>
-            <div className= {`${toogle?"bg-white":"bg-[#38383F]"}  w-[36px] h-[36px] rounded-full`}>
+          <div onClick={()=>setToogle(!toogle)} className={`${toogle? "bg-primary justify-end" : "bg-[#18191B] justify-start" } tranis w-[87px] flex items-center  rounded-[29px] h-[29px] `}>
+            <div className= {`${toogle?"bg-white":"bg-[#38383F]"} tranis w-[36px] h-[36px] rounded-full`}>
 
             </div>
           </div>
@@ -130,154 +146,37 @@ const DetailedBottomView = () => {
           </p>
         </div>
       </div>
-       {/* <div className='font-[800] h-[60vh] rounded-[40px_40px_0px_0px] overflow-hidden'>
-        <div className='w-full text-[32px]  '>
-          <div className="uppercase">
-            <ul className=' text-white grid grid-cols-6 text-opacity-40   bg-[#38383F] py-7 px-12'>
-              <li className='   '>ACCOUNT</li>
-              <li className='  '>TYPE</li>                
-              <li className='  '>ETH</li>
-              <li className='  '>PROMOTION</li>
-              <li className='  '>DATE</li>
-              <li className='  '>TRANSACTION</li>
-            </ul>
-          </div>
-          <div className='py-7 px-12 bg-[#111111] space-y-6 h-[42vh] overflow-y-scroll'>
-            <ul className="flex ">
-              <li className=" text-white font-[700]">TEG3....4efD</li>
-              <li className={` text-[#FFFF00] `}>SELL</li>
-              <li className=" text-white font-[700]">12,3456</li>
-              <li className=" text-white ">571,201.94</li>
-              <li className="text-white font-[700] ">1 min ago</li>
-              <li className=" text-primary font-[700]">38HFH38RH..5347</li>
-            </ul>
-            
-            <ul className="grid grid-cols-6 ">
-              <li className=" text-white font-[700]">TEG3....4efD</li>
-              <li className={` text-[#FFFF00] `}>SELL</li>
-              <li className=" text-white font-[700]">12,3456</li>
-              <li className=" text-white ">571,201.94</li>
-              <li className="text-white font-[700] ">1 min ago</li>
-              <li className=" text-primary font-[700]">38HFH38RH..5347</li>
-            </ul>
-            
-            <ul className="grid grid-cols-6 ">
-              <li className=" text-white font-[700]">TEG3....4efD</li>
-              <li className={` text-[#FFFF00] `}>SELL</li>
-              <li className=" text-white font-[700]">12,3456</li>
-              <li className=" text-white ">571,201.94</li>
-              <li className="text-white font-[700] ">1 min ago</li>
-              <li className=" text-primary font-[700]">38HFH38RH..5347</li>
-            </ul>
-            
-            <ul className="grid grid-cols-6 ">
-              <li className=" text-white font-[700]">TEG3....4efD</li>
-              <li className={` text-[#FFFF00] `}>SELL</li>
-              <li className=" text-white font-[700]">12,3456</li>
-              <li className=" text-white ">571,201.94</li>
-              <li className="text-white font-[700] ">1 min ago</li>
-              <li className=" text-primary font-[700]">38HFH38RH..5347</li>
-            </ul>
-            <ul className="grid grid-cols-6 ">
-              <li className=" text-white font-[700]">TEG3....4efD</li>
-              <li className={` text-[#FFFF00] `}>SELL</li>
-              <li className=" text-white font-[700]">12,3456</li>
-              <li className=" text-white ">571,201.94</li>
-              <li className="text-white font-[700] ">1 min ago</li>
-              <li className=" text-primary font-[700]">38HFH38RH..5347</li>
-            </ul>
-            <ul className="grid grid-cols-6 ">
-              <li className=" text-white font-[700]">TEG3....4efD</li>
-              <li className={` text-[#FFFF00] `}>SELL</li>
-              <li className=" text-white font-[700]">12,3456</li>
-              <li className=" text-white ">571,201.94</li>
-              <li className="text-white font-[700] ">1 min ago</li>
-              <li className=" text-primary font-[700]">38HFH38RH..5347</li>
-            </ul>
-            <ul className="grid grid-cols-6 ">
-              <li className=" text-white font-[700]">TEG3....4efD</li>
-              <li className={` text-[#FFFF00] `}>SELL</li>
-              <li className=" text-white font-[700]">12,3456</li>
-              <li className=" text-white ">571,201.94</li>
-              <li className="text-white font-[700] ">1 min ago</li>
-              <li className=" text-primary font-[700]">38HFH38RH..5347</li>
-            </ul>
-            <ul className="grid grid-cols-6 ">
-              <li className=" text-white font-[700]">TEG3....4efD</li>
-              <li className={` text-[#FFFF00] `}>SELL</li>
-              <li className=" text-white font-[700]">12,3456</li>
-              <li className=" text-white ">571,201.94</li>
-              <li className="text-white font-[700] ">1 min ago</li>
-              <li className=" text-primary font-[700]">38HFH38RH..5347</li>
-            </ul>
-            <ul className="grid grid-cols-6 ">
-              <li className=" text-white font-[700]">TEG3....4efD</li>
-              <li className={` text-[#FFFF00] `}>SELL</li>
-              <li className=" text-white font-[700]">12,3456</li>
-              <li className=" text-white ">571,201.94</li>
-              <li className="text-white font-[700] ">1 min ago</li>
-              <li className=" text-primary font-[700]">38HFH38RH..5347</li>
-            </ul>
-            <ul className="grid grid-cols-6 ">
-              <li className=" text-white font-[700]">TEG3....4efD</li>
-              <li className={` text-[#FFFF00] `}>SELL</li>
-              <li className=" text-white font-[700]">12,3456</li>
-              <li className=" text-white ">571,201.94</li>
-              <li className="text-white font-[700] ">1 min ago</li>
-              <li className=" text-primary font-[700]">38HFH38RH..5347</li>
-            </ul>
-            <ul className="grid grid-cols-6 ">
-              <li className=" text-white font-[700]">TEG3....4efD</li>
-              <li className={` text-[#FFFF00] `}>SELL</li>
-              <li className=" text-white font-[700]">12,3456</li>
-              <li className=" text-white ">571,201.94</li>
-              <li className="text-white font-[700] ">1 min ago</li>
-              <li className=" text-primary font-[700]">38HFH38RH..5347</li>
-            </ul>
-            <ul className="grid grid-cols-6 ">
-              <li className=" text-white font-[700]">TEG3....4efD</li>
-              <li className={` text-[#FFFF00] `}>SELL</li>
-              <li className=" text-white font-[700]">12,3456</li>
-              <li className=" text-white ">571,201.94</li>
-              <li className="text-white font-[700] ">1 min ago</li>
-              <li className=" text-primary font-[700]">38HFH38RH..5347</li>
-            </ul>
-            
-
-          </div>
-        </div>
-       
-
-      </div>  */}
+      
       <div className=' rounded-[40px_40px_0px_0px] overflow-x-hidden'>
-      <table className="w-full text-[32px]  font-[800] border-collapse border-spacing-0">
-  <thead className="uppercase ">
-    <tr className="text-white text-opacity-40 bg-[#38383F] sticky top-[-1px] m-0 border-none shadow-none">
-      <th>ACCOUNT</th>
-      <th>TYPE</th>
-      <th>ETH</th>
-      <th>PROMOTION</th>
-      <th>DATE</th>
-      <th>TRANSACTION</th>
-    </tr>
-  </thead>
-  <tbody className=" bg-[#111111]">
-    {[...Array(18)].map((_, index) => (
-      <tr key={index} className="text-white">
-        <td className="font-[700] w-[300px] text-center">TEG3....4efD</td>
-        <td className="text-[#FFFF00] w-[200px] text-center">SELL</td>
-        <td className="font-[700] w-[200px] text-center">12,3456</td>
-        <td className='w-[300px] text-center'>571,201.94</td>
-        <td className="font-[700] w-[200px] text-center">1 min ago</td>
-        <td className="text-primary font-[700] w-[400px]  text-center">38HFH38RH..5347</td>
-      </tr>
-    ))}
-  </tbody>
+        <table className="w-full text-[32px]  font-[800] border-collapse border-spacing-0">
+        <thead className="uppercase ">
+          <tr className="text-white text-opacity-40 bg-[#38383F] sticky top-[-1px] m-0 border-none shadow-none">
+            <th>ACCOUNT</th>
+            <th>TYPE</th>
+            <th>ETH</th>
+            <th>PROMOTION</th>
+            <th>DATE</th>
+            <th>TRANSACTION</th>
+          </tr>
+        </thead>
+        <tbody className=" bg-[#111111]">
+        {[...Array(18)].map((_, index) => (
+          <tr key={index} className="text-white">
+            <td className="font-[700] w-[300px] text-center">TEG3....4efD</td>
+            <td className="text-[#FFFF00] w-[200px] text-center">SELL</td>
+            <td className="font-[700] w-[200px] text-center">12,3456</td>
+            <td className='w-[300px] text-center'>571,201.94</td>
+            <td className="font-[700] w-[200px] text-center">1 min ago</td>
+            <td className="text-primary font-[700] w-[400px]  text-center">38HFH38RH..5347</td>
+          </tr>
+        ))}
+        </tbody>
         </table>
         </div>
-    </div>
+    </motion.div>
+    
       }
-        
+        </AnimatePresence>
 
        
 
