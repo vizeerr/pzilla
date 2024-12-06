@@ -12,9 +12,9 @@ const SettingModel = ({openSet,setOpenSet}) => {
     {openSet&& (
     <motion.div
      key="setting-modal"
-     initial={{ opacity: 0, x: 150,height: 160  }} // Start from left
-     animate={{ opacity: 1, x: 0 ,height: opt > 1 ? 235 : 160,}} // Move to center when open
-    exit={{ opacity: 0, x: 150 }} 
+     initial={{  x: 350,height: 160  }} // Start from left
+     animate={{  x: 0 ,height: opt > 1 ? 235 : 160,}} // Move to center when open
+    exit={{  x: 350 }} 
     transition={{ duration: 0.3 }} className={`font-montserrat absolute end-5 z-20 w-[304px] px-[20px] pt-[8px] pb-[14px] bg-[#2C2D30] rounded-[32px]`}>
         <div className='flex items-center justify-between'>
             <p className='text-primary text-[13px] font-[900]'>SET MAX SLIPPAGE</p>
@@ -42,7 +42,7 @@ const SettingModel = ({openSet,setOpenSet}) => {
             )}
           {/* </AnimatePresence> */}
 
-        <div className='flex justify-center'>
+        <div className='flex justify-center relative bottom-0 tranis'>
 
             <button onClick={()=>setOpenSet(false)} className='text-[#262626] anim bg-primary rounded-full font-[900] text-[18.5px] w-[122px]'>SAVE</button>
         </div>

@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 :root{
-  --prim-color : #A8FF2F
+  --prim-color : #A8FF2F;
+  --mont : 'mont',serif;
 }
 
 body{
@@ -18,6 +19,12 @@ body{
 }
 
 @font-face{
+  font-family: 'mont';
+  src:url("../fonts/mont.ttf") format("truetype")
+}
+
+
+@font-face{
   font-family: 'sachabo';
   src:url("../fonts/sh.otf") format("opentype")
 }
@@ -26,6 +33,10 @@ body{
   font-family: 'round',sans-serif;
 }
 
+
+.mont{
+  font-family: 'mont',serif;
+}
 .sachabo{
   font-family: 'sachabo',sans-serif;
 }

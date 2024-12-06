@@ -161,7 +161,7 @@ const DetailedRightView = () => {
 
                 </div>
               </div>
-              <p className='text-[15px] font-montserrat font-[900] text-center mt-4'>Dethrone <span className='font-[700] opacity-40'>the current king at </span> <span className='text-primary font-[900] font-montserrat'>$43,134 market cap.</span></p>
+              <p className='text-[14px] font-montserrat font-[900] text-center mt-4'>Dethrone <span className='font-[700] opacity-40'>the current king at </span> <span className='text-primary font-[900] font-montserrat'>$43,134 market cap.</span></p>
             </div>
           </div>
           

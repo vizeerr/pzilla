@@ -1,7 +1,7 @@
 import { Toaster } from "react-hot-toast";
 import "./globals.css";
 import {Bebas_Neue , Montserrat } from 'next/font/google'
- 
+import localFont from 'next/font/local'
 export const bebasneue = Bebas_Neue({
   subsets: ['latin'],
   variable: '--font-bebas',

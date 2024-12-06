@@ -15,7 +15,7 @@ const LaunchFooter = () => {
     </div>
     <div className='curvbg w-[728px]  rounded-[60px] ps-[28px] py-[40px] relative'>
       <p className='anim  text-[#1B1C1E] sachabo text-[40px] bg-primary rounded-full px-4 pt-6 absolute end-0 top-0 pb-4 text-center w-[290px]'> DEVELOPER REWARD</p>
-      <p className='font-montserrat font-[900] text-primary p-[5px] text-[48px] bg-[#19191C] px-8 pb-6 pt-4 w-[311px] rounded-[32px]'>0.144 ETH</p>
+      <p className='font-montserrat font-[900] text-primary p-[5px] text-[45px] bg-[#19191C] px-8 pb-6 pt-4 w-[311px] rounded-[32px]'>0.144 ETH</p>
       <p className='sachabo text-primary font-[400] mt-2 text-[58px] mx-[40px]'> Directly into your wallet</p>
       <p className='sachabo text-white font-[400] text-[58px] mt-[50px] mx-[40px]'> Achieve the Bonding Curve milestone.</p>
 
