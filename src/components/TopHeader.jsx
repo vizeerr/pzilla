@@ -83,7 +83,7 @@ const TopHeader = () => {
         </div>
 
         <div className="flex flex-col items-end">
-            <Link href={"/launch"}>
+            <Link href={"/pumpzilla-token"}>
             <div className="bg-primary anim w-[275px] border-[6px] border-[#3C3C3C] shadow-[10.16px_13.2px_33.51px_0px_#00000040] rounded-[45px_0px] py-3 text-center">
                 <p className="font-[900] font-montserrat text-[21px] text-[#3C3C3C]">PUMPZILLA TOKEN</p>
             </div>
