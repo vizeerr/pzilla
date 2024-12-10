@@ -1,6 +1,6 @@
 "use client"
 import Image from 'next/image'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import sett from "@/assets/sett.svg"
 import bgwall from "@/assets/bgwall.svg"
 import eth from "@/assets/eth.png"
@@ -18,11 +18,40 @@ const ZillaRightView = () => {
     const [amt,setAmt] = useState(null)
     const [balance,setBalance] = useState(0.000010)
     const [hoveredCard, setHoveredCard] = useState(null); // Track hovered card
+    const [mcard, setMcard] = useState(null); // Track hovered card
+
 
     const handleMouseEnter = (cardId) => setHoveredCard(cardId);
     const handleMouseLeave = () => setHoveredCard(null);
   
     const [prom,setPromo] = useState(false)
+    const [degree, setDegree] = useState(0);
+    const [timeElapsed, setTimeElapsed] = useState(0); // Time in seconds
+    const totalDuration = 30 * 60; // 30 minutes in seconds
+  
+    useEffect(() => {
+      const interval = setInterval(() => {
+        setTimeElapsed((prev) => {
+          if (prev < totalDuration) {
+            const newElapsed = prev + 1;
+            setDegree((newElapsed / totalDuration) * 360); 
+            return newElapsed;
+          }
+          clearInterval(interval); 
+          return prev;
+        });
+      }, 1000);
+  
+      return () => clearInterval(interval);
+    }, []);
+  
+    const formatTime = (seconds) => {
+      const minutes = Math.floor(seconds / 60);
+      const secs = seconds % 60;
+      return `${String(minutes).padStart(2, "0")}:${String(secs).padStart(2, "0")}`;
+    };
+    
+
   return (
     <div className='flex flex-col gap-[32px]'>
         <div className='bg-[#1B1C1E]  overflow-x-hidden relative p-[32px] shadow-[12.7px_12.7px_44.02px_0px_#0000004F] rounded-[40px]'>
@@ -178,41 +207,54 @@ const ZillaRightView = () => {
           ))}
 
 
-                <div className='bg-[#111111]  w-[490px]  shadow-[16.21px_16.21px_56.21px_0px_#0000004F] ps-[35px] pe-[25px] py-[15px]  rounded-[30px]'>
-                    <Image src={info} alt='' className='float-right'/>
-                    
-                    <div className='flex justify-between items-center'>
-                        <div>
-                            <p className='font-bebasneue font-[400] text-[42px] text-primary'>Tax Stage Timer</p>
-                        </div>
-                        <div>
-                        <div className='w-[141px] h-[141px]'>
-                        <CircularSlider
-                            
-                            labelColor="#ffffff"
-                            knobColor="#ffffff"
-                            progressColorFrom="#A8FF2F"
-                            progressColorTo="#A8FF2F"
-                            progressSize={5}
-                            trackColor="#262626"
-                            trackSize={5}
-                            knobSize={20}
-                            
-                            knobDraggable={false}
-                            width={130}
-                            hideLabelValue={true}
-                            initialValue={50}
-                            data={["1"]}
-                        />
-                        </div>
+                <motion.div
+                key="5"
+                initial={{ rotateX: 0 }}
+                animate={{rotateX: mcard?  180  :  0 }}
+                transition={{ duration: 0.6 }}
+                 className='bg-[#111111] card  w-[490px]  shadow-[16.21px_16.21px_56.21px_0px_#0000004F]  rounded-[30px]'>
+                    <div className='ps-[35px] pe-[25px] py-[15px] card-front'>
+                       <Image src={info} alt='' className='float-right' onMouseEnter={()=>setMcard(true)}/>
                         
+                        <div className='flex justify-between items-center'>
+                            <div>
+                                <p className='font-bebasneue font-[400] text-[42px] text-primary'>Tax Stage Timer</p>
+                            </div>
+                            <div>
+                                <div className=''>
+                                    <CircularSlider
+                                    
+                                        labelColor="#ffffff"
+                                        knobColor="#ffffff"
+                                        progressColorFrom="#A8FF2F"
+                                        progressColorTo="#A8FF2F"
+                                        progressSize={5}
+                                        trackColor="#262626"
+                                        labelBottom={true}
+                                        trackSize={5}
+                                        knobSize={20}
+                                        knobDraggable={false}
+                                        width={130}                           
+                                        initialValue={0}
+                                        value={formatTime(timeElapsed)}
+                                        dataIndex={degree} 
+                                        label={"MIN SEC"}
+                                        valueFontSize={"1.7rem"}
+                                        labelFontSize={"0.8rem"}
+                    
+                                    />
+                                </div>
+                            </div>
 
                         </div>
+                    </div>
 
+                    <div onMouseLeave={()=>setMcard(false)} className='card-back px-[35px]'>
+                    <p className='font-montserrat leading-[18px] font-[700] text-[15px]'>Displays remaining time in the active tax stage, ending if the price recovers to the base or after 30 minutes, whichever comes first.</p>
                     </div>
 
                     
-                </div>
+                </motion.div>
 
 
             </div>
