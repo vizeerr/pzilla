@@ -223,7 +223,7 @@ const ZillaRightView = () => {
                             <div>
                                 <div className=''>
                                     <CircularSlider
-                                    
+                                                                        
                                         labelColor="#ffffff"
                                         knobColor="#ffffff"
                                         progressColorFrom="#A8FF2F"
@@ -236,12 +236,11 @@ const ZillaRightView = () => {
                                         knobDraggable={false}
                                         width={130}                           
                                         initialValue={0}
-                                        value={formatTime(timeElapsed)}
                                         dataIndex={degree} 
-                                        label={"MIN SEC"}
-                                        valueFontSize={"1.7rem"}
-                                        labelFontSize={"0.8rem"}
-                    
+                                        label={formatTime(timeElapsed)}
+                                        valueFontSize={"0rem"}
+                                        labelFontSize={"1.4rem"}
+
                                     />
                                 </div>
                             </div>
