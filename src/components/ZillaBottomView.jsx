@@ -25,9 +25,9 @@ const ZillaBottomView = () => {
                         <Image onMouseEnter={()=>setHover(true)} src={info} alt='' width={42} height={42}/>
                     </div> 
                     
-                    <div className='mt-12 mb-10 flex justify-between items-center'>
+                    <div className=' mb-10 flex justify-between items-center'>
                         
-                        <div>
+                        <div className='mt-12'>
                             <p className='text-white font-montserrat font-[800] text-[90px]'>1,234.5678 <span className='text-primary text-[31px]'>PumpZilla</span></p>
                             <div className='bg-[#111111] mt-4 shadow-[16.21px_16.21px_56.21px_0px_#0000004F] w-[597px] text-center rounded-[75px] py-[15px]'>
                                 <p className='font-montserrat text-[58px] font-[800]'>$123.45 <span className='text-primary'>USD</span></p>                       

@@ -17,10 +17,10 @@ const page = () => {
             Learn more in our <span className='text-opacity-100 text-primary'>documentation</span>.
             </p>
         </div>
-        <div className='w-full'>
+        <div className='w-full '>
             <div className='mx-auto w-[118px] h-[10px] bg-white rounded-[21px] my-[30px]'></div>
         </div>
-        <div className='flex gap-[45px]'>
+        <div className='mt-16 flex gap-[45px]'>
           <ZillaLeftView/>
           <ZillaRightView/>
         </div>

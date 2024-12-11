@@ -7,8 +7,10 @@ const ZillaLeftView  = () =>{
 
     <div>
       <div className='bg-[#1B1C1E] h-[700px] shadow-[16.21px_16.21px_56.21px_0px_#0000004F] rounded-[50px]'>
-        <div className=' flex justify-between items-center'>
+        <div className=' flex justify-between items-start'>
+          
             <p className='font-[900] pt-[38px] pb-[28px] ps-[54px]  font-montserrat text-[35px] text-white'><span className='text-primary'>Live</span> Price <span className='text-primary'>Chart</span></p>
+          
             <div className='bg-primary  rounded-[0_50px] w-[361px] py-[20px] text-center'>
                 <p className='font-[800] font-montserrat text-[35px] text-[#262626] '>MCap : <span className='font-[900]'>19.9k</span></p>
             </div>

@@ -53,8 +53,8 @@ const ZillaRightView = () => {
     
 
   return (
-    <div className='flex flex-col gap-[32px]'>
-        <div className='bg-[#1B1C1E]  overflow-x-hidden relative p-[32px] shadow-[12.7px_12.7px_44.02px_0px_#0000004F] rounded-[40px]'>
+    <div className='flex flex-col gap-[32px] '>
+        <div className='bg-[#1B1C1E] overflow-x-hidden relative p-[32px] shadow-[12.7px_12.7px_44.02px_0px_#0000004F] rounded-[40px]'>
             <div className='gap-[23px] flex'>
               <button onClick={()=>setBtnState('buy')} className= {`${btnState=="buy"? "bg-primary text-[#1B1C1E]" :"text-[#666666] bg-[#2C2D30]"} border-0  anim w-full py-[10px]   shadow-[4.23px_4.23px_11.96px_0px_#00000054] rounded-[18px] font-[800] text-[21px]`}> BUY</button>
               <button  onClick={()=>setBtnState('sell')} className= {`${btnState=="sell"? "bg-primary text-[#1B1C1E]" :"text-[#666666] bg-[#2C2D30]"} border-0  anim w-full py-[10px]   shadow-[4.23px_4.23px_11.96px_0px_#00000054] rounded-[18px] font-[800] text-[21px]`}> SELL</button>
@@ -74,7 +74,9 @@ const ZillaRightView = () => {
             <div> 
                 <div className='bg-[#111111] rounded-[24px] mt-4 p-5 flex justify-between items-center shadow-[12.7px_12.7px_14.81px_0px_#00000040]'>
                     <div>
-                        <p className='font-bebasneue opacity-30 text-[24px] font-[400]'> Enter amount</p>
+                    <input type='number' onChange={(e)=>{
+                            setAmt(e.target.value)
+                        }} className='font-bebasneue text-[24px] font-[400] bg-transparent' placeholder='Enter amount'/> 
                         <p className=' opacity-30 text-[10px] font-[400]'>User balance : {balance} PROMOTION</p>
                     </div>
                     <div className='w-[48.5px] h-[48.5px] rounded-full overflow-hidden'>
@@ -111,7 +113,7 @@ const ZillaRightView = () => {
 
             </div> :
             <div>
-                <div className='bg-[#111111] rounded-[24px] mt-4 p-5 flex justify-between items-center shadow-[12.7px_12.7px_14.81px_0px_#00000040]'>
+                <div className='bg-[#111111]  rounded-[24px] mt-4 p-5 flex justify-between items-center shadow-[12.7px_12.7px_14.81px_0px_#00000040]'>
                     <div>
                         <input type='number' onChange={(e)=>{
                             setAmt(e.target.value)
@@ -127,7 +129,7 @@ const ZillaRightView = () => {
                     <p className={`${amt>balance? "block" :"hidden"} font-bebasneue text-[15px] text-[#FF2F61]`}>insufficient balance</p>
                 </div>
                 <div className='flex justify-between items-center gap-[25px] mt-[30px]'>
-                    <div className='flex flex-wrap  gap-[5px]'>
+                    <div className='flex-col  gap-[5px]'>
                         <div className='flex gap-2'>
                             <div className='bg-[#2C2D30] anim rounded-full w-[68px] text-center pt-[3px]'>
                             <p className='font-bebasneue font-[400] text-[15px] opacity-50'>RESET</p>
@@ -136,7 +138,7 @@ const ZillaRightView = () => {
                             <p className='font-bebasneue font-[400] text-[15px] opacity-50'>0.10 ETH</p>
                             </div>
                         </div>
-                        <div className='flex gap-2'>
+                        <div className='flex gap-2 mt-[5px]'>
                             <div className='bg-[#2C2D30] anim rounded-full w-[68px] text-center pt-[3px]'>
                                 <p className='font-bebasneue font-[400] text-[15px] opacity-50'>0.05 ETH</p>
                             </div>
@@ -158,7 +160,7 @@ const ZillaRightView = () => {
             
           </div>
 
-        <div className='bg-[#1B1C1E] overflow-x-hidden relative p-[32px] shadow-[12.7px_12.7px_44.02px_0px_#0000004F] rounded-[40px]'>
+        <div className='bg-[#1B1C1E] h-[780px] overflow-x-hidden relative p-[32px] shadow-[12.7px_12.7px_44.02px_0px_#0000004F] rounded-[40px]'>
             <p className='font-[900]  pb-[28px]   font-montserrat text-[35px] text-white'><span className='text-primary'>Tax</span> Mechanism </p>
             <div className='flex flex-col gap-[25px]'>
             {[
