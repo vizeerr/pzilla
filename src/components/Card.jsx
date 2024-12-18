@@ -21,18 +21,18 @@ const Card = ({data}) => {
             </div>
             <div className="flex gap-2 items-start">
                 <Link href={data.website}>
-                <div className="bg-[#262626] anim w-[22px] h-[22px] flex justify-center items-center rounded-full">
-                    <Image src={wlogo} width={8.61} className="" alt="" />
+                <div className="bg-[#262626] anim w-[26px] h-[26px] flex justify-center items-center rounded-full">
+                    <Image src={wlogo} width={15} className="" alt="" />
                 </div>
                 </Link>
                 <Link href={data.twitter}>
-                <div className="bg-[#262626] anim w-[22px] h-[22px] flex justify-center items-center rounded-full">
-                    <Image src={xlogo} width={8.61} className="" alt="" />
+                <div className="bg-[#262626] anim w-[26px] h-[26px] flex justify-center items-center rounded-full">
+                    <Image src={xlogo} width={15} className="" alt="" />
                 </div>
                 </Link>
                 <Link href={data.telegram}>
-                <div className="bg-[#262626] anim w-[22px] h-[22px] flex justify-center items-center rounded-full">
-                    <Image src={tlogo} width={8.61} alt="" />
+                <div className="bg-[#262626] anim w-[26px] h-[26px] flex justify-center items-center rounded-full">
+                    <Image src={tlogo} width={15} alt="" />
                 </div>
                 </Link>
             </div>

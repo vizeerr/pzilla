@@ -3,7 +3,7 @@ import { useState } from "react"
 import searchIco from "@/assets/search.svg"
 import sort from "@/assets/sort.svg"
 import cross from "@/assets/cross.svg"
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image"
 const Tabs = () => {
   const [open,setOpen] = useState(false);
@@ -31,21 +31,22 @@ const Tabs = () => {
         <div className="flex items-center gap-6 relative">
             <div className="bg-white flex justify-between gap-1 pt-0.5 pb-1 w-[476px] rounded-full items-center ps-7 pe-5 overflow-hidden ">
                 <Image src={searchIco} alt="" />
-                <input type="text" placeholder='SEARCH TOKENS' className="font-[800] font-montserrat w-full text-center border-0 active:border-0 " />
+                <input type="text" placeholder='SEARCH TOKENS' className="focus:border-0 active:border-0 font-[800] font-montserrat w-full text-center border-0 outline-none " />
             </div>
             
-            <button onClick={()=>setOpen(true)} className="px-[25px] anim flex items-center gap-5 font-[400] rounded-full font-bebasneue bg-[#4C4C5A] text-white text-[22px] pt-1 pb-0.5  ">
+            <button onMouseOver={()=>setOpen(true)} className="px-[25px] anim flex items-center gap-5 font-[400] rounded-full font-bebasneue bg-[#4C4C5A] text-white text-[22px] pt-1 pb-0.5  ">
                 <Image src={sort} alt=""/>
                 SORT BY
             </button>
-            
+            <AnimatePresence>
             <motion.div
+            onMouseLeave={()=>setOpen(false)}
             initial={{ opacity: 0}}
             animate={{ opacity: open ? 1 : 0}}
             exit={{ opacity: 0}}
             transition={{ duration: 0.3 }}
             className={`${open?'block':'hidden'} absolute bg-[#35363D] rounded-[27px] w-[190px] px-1 py-1 end-[-30px]`}>
-              <Image src={cross}  className="w-[15px] mt-1 me-2 float-end h-[15px]" onClick={() =>setOpen(false)} alt="" />
+              {/* <Image src={cross}  className="w-[15px] mt-1 me-2 float-end h-[15px]" onClick={() =>setOpen(false)} alt="" /> */}
               <div onClick={()=>setBtns(!btnS)} className="flex items-center gap-2 mt-3 ps-3">
                 <div className="w-[13.5px] mb-[1.5px] h-[14px] border-[2px] rounded-full border-white bg-transparent flex justify-center items-center">
                   <div className={`${btnS?'bg-primary':'bg-transparent'} w-[7px] h-[7px] rounded-full`}>                    
@@ -73,6 +74,7 @@ const Tabs = () => {
 
 
             </motion.div>
+            </AnimatePresence>
         </div>
       
     </div>

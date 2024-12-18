@@ -9,7 +9,7 @@ const page = () => {
     <div className='bg-[#121215]'>
       <TopNavbar/>
       <LaunchForm/>
-      <LaunchFooter/>
+      {/* <LaunchFooter/> */}
       
     </div>
   )
