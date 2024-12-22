@@ -14,6 +14,8 @@ import toast from 'react-hot-toast'
 
 const DetailedLefView = ({token}) => {
   const [tokenData,setTokenData] = useState({});
+  const [copiedText,setCopiedText] = useState("REFERRAL DASHBOARD");
+
   const fetchToken = async() =>{
     const data = await getToken(token);
     setTokenData(data)
@@ -21,12 +23,13 @@ const DetailedLefView = ({token}) => {
   
 
   const handleCopy = async () => {
-    try {
       await navigator.clipboard.writeText('AWEBFSOIWGERGE5566544551423404599349');
-      toast.success("Unique Link Copied")
-    } catch (err) {
-      console.error('Failed to copy text: ', err);
-    }
+      setCopiedText('REFERRAL COPIED')
+      setTimeout(()=>{
+      setCopiedText('REFERRAL DASHBOARD')
+
+      },2000)
+    
   };
   
   
@@ -36,9 +39,9 @@ const DetailedLefView = ({token}) => {
 
 
   return (
-    <div className='flex flex-col gap-[32px] '>
+    <div className='flex flex-col gap-[32px] w-full'>
           
-          <div className='bg-[#1B1C1E] p-[30px] h-[578px] flex flex-col justify-between shadow-[12.7px_12.7px_44.02px_0px_#0000004F] rounded-[40px]'>
+          <div className='bg-[#1B1C1E]  p-[30px]  flex flex-col justify-between shadow-[12.7px_12.7px_44.02px_0px_#0000004F] rounded-[40px]'>
             <div className='flex justify-between items-start'>
               <div className='flex items-center gap-[33px]'>
                 <div className='rounded-[21.16px] relative overflow-hidden'>
@@ -79,20 +82,22 @@ const DetailedLefView = ({token}) => {
                 <p className='font-[800] text-[46px]'>$ 54,124</p>
               </div>
             </div>
-            <p className='font-[600] mt-4 opacity-45 text-[19px] leading-[23px]'>{tokenData.description}</p>
-            <div className='flex justify-between mt-10 gap-[18px]'>
+            <p className='font-[600] h-[85px] mt-4 opacity-45 text-[19px] leading-[23px] overflow-y-scroll'>
+            {tokenData.description}
+            </p>
+            <div className='flex justify-evenly mt-5 gap-[18px]'>
              
-              <div className='bg-[#363A40] w-[428px] rounded-[28.5px] p-[25px] shadow-[7.41px_7.41px_26.45px_0px_#00000040]'>
-                <p className='capitalize font-bebasneue font-[400] text-[44px]'>Price</p>
-                <p className='text-primary font-[800] text-[32px]'>0.000000000025 ETH</p>
+              <div className='bg-[#363A40] w-[340px] rounded-[28.5px] p-[25px] shadow-[7.41px_7.41px_26.45px_0px_#00000040]'>
+                <p className='capitalize font-bebasneue font-[400] text-[30px]'>Price</p>
+                <p className='text-primary font-[800] text-[25px]'>0.000000000025 ETH</p>
               </div>
-              <div className='bg-[#363A40] w-[428px] rounded-[28.5px] p-[25px] shadow-[7.41px_7.41px_26.45px_0px_#00000040]'>
-                <p className='capitalize font-bebasneue font-[400] text-[44px]'>24H volume</p>
-                <p className='text-primary font-[800] text-[32px]'>$9,999,999.000</p>
+              <div className='bg-[#363A40] w-[340px] rounded-[28.5px] p-[25px] shadow-[7.41px_7.41px_26.45px_0px_#00000040]'>
+                <p className='capitalize font-bebasneue font-[400] text-[30px]'>24H volume</p>
+                <p className='text-primary font-[800] text-[25px]'>$9,999,999.000</p>
               </div>
-              <div className='bg-[#363A40] w-[428px] rounded-[28.5px] p-[25px] shadow-[7.41px_7.41px_26.45px_0px_#00000040]'>
-                <p className='capitalize font-bebasneue font-[400] text-[44px]'>Token created</p>
-                <p className='text-primary font-[800] text-[32px]'>{formatTime(tokenData.created_at)} <span className='text-white'>ago</span></p>
+              <div className='bg-[#363A40] w-[340px] rounded-[28.5px] p-[25px] shadow-[7.41px_7.41px_26.45px_0px_#00000040]'>
+                <p className='capitalize font-bebasneue font-[400] text-[30px]'>Token created</p>
+                <p className='text-primary font-[800] text-[25px]'>{formatTime(tokenData.created_at)} <span className='text-white'>ago</span></p>
               </div>
             </div>
 
@@ -106,20 +111,20 @@ const DetailedLefView = ({token}) => {
               </div>
           </div>
 
-          <div className='bg-[#1B1C1E] shadow-[12.7px_12.7px_44.02px_0px_#0000004F] pb-5 rounded-[40px] overflow-hidden'>
+          <div className='bg-[#1B1C1E] shadow-[12.7px_12.7px_44.02px_0px_#0000004F]  pb-8 rounded-[40px] overflow-hidden'>
 
             <div className='flex justify-between items-start '>
-              <p className='text-[#000000] leading-[58px] round font-[500] text-[61px] ps-[20px] pe-[40px]   pt-[15px] mt-5 bg-primary rounded-[0_21px_21px_0]'>Share  &  Earn  with  PumpZilla</p>
-              <p className='bg-[#303236] shadow-[6.35px_6.35px_39.15px_0px_#00000040] mt-[16px] me-[16px] text-primary font-[700] text-[24px] py-[13px] px-[18px] rounded-[18px]'>REFERRAL DASHBOARD</p>
+              <p className='text-[#000000] leading-[58px] font-montserrat font-[900] text-[36px] uppercase ps-[20px] pe-[40px]   pt-[5px] mt-5 bg-primary rounded-[0_21px_21px_0]'>Share  &  Earn  with  PumpZilla</p>
+              <p className='bg-[#303236] shadow-[6.35px_6.35px_39.15px_0px_#00000040] w-[350px] anim text-center mt-[16px] me-[16px] text-primary font-[700] text-[24px] py-[13px] px-[18px] rounded-[18px]'>{copiedText}</p>
             </div>
-            <div className='px-[30px] mt-[38px] flex gap-[31px] items-center'>
+            <div className='px-[30px] mt-[50px] flex gap-[31px] items-center'>
               <p className='font-[400] anim bg-[#37393D] py-[10px] px-[35px] rounded-[22px]' onClick={handleCopy}> <span className='font-bebasneue text-[42px] '> YOUR UNIQUE LINK : </span>   <span className='text-primary font-[700] text-[33px]'> AWEBFSOIWGERGE....1423404599349</span> </p>
               <div  className='bg-primary anim  w-[78px] h-[78px] p-[16px] rounded-[22px]'>
 
                 <Image src={xblack} alt='' />
               </div>
             </div>
-            <p className='gradientText font-[500] text-[52px] round mt-5 text-end pe-10'>Earn  weekly  PumpZilla  rewards  through  referrals !</p>
+            <p className='gradientText font-[500] text-[52px] round mt-8 text-end pe-10'>Earn  weekly  PumpZilla  rewards  through  referrals !</p>
 
           </div>
 

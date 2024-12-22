@@ -46,7 +46,7 @@ const Card = ({data}) => {
         </div>
         <div className="mt-3">
             <div className="bg-[#D9D9D9] rounded-[20px_20px_0px_0px] p-3">
-                <p className="text-[#262626C2] font-montserrat font-[800] text-[7.5px] leading-[9.2px]">{data.description}</p>
+                <p className="text-[#262626C2] font-montserrat font-[800] text-[7.5px] leading-[9.2px] h-[25px]">{data.description.slice(0,198)}...</p>
 
             </div>
             <div className="bg-[#262626] mt-1.5 rounded-[0px_0px_25px_25px] p-4 shadow-[6px_6px_13.8px_0px_#000000C9]">

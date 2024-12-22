@@ -5,6 +5,11 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const Model = ({ open, setOpen }) => {
+    const handleClose = (e)=>{
+        if (e.target.id === "background") {
+            setOpen(false);
+        }
+    }
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -14,6 +19,8 @@ const Model = ({ open, setOpen }) => {
             className={`${
                 open ? "flex" : "hidden"
             } bg-[#000000A3] fixed z-30 justify-end w-full h-screen  px-8 top-0`}
+             onClick={(e)=>handleClose(e)}
+            id="background"
              
         >
             <motion.div
@@ -21,13 +28,14 @@ const Model = ({ open, setOpen }) => {
                 animate={{ opacity: open ? 1 : 0}}
                 exit={{ opacity: 0, y: -50 }}
                 transition={{ duration: 0.3 }}
+                id="box"
                 className={`${
                     open ? "block" : "hidden"
                 } bg-[rgb(30,30,37)] w-[782px] h-min rounded-[47px] py-4 relative top-[85px]`}
             >
                 <Image
                     src={cross}
-                    className="float-end me-3 mt-1 cursor-pointer"
+                    className="float-end me-3 mt-1 cursor-pointer anim"
                     onClick={() => setOpen(false)}
                     alt=""
                 />
@@ -42,9 +50,9 @@ const Model = ({ open, setOpen }) => {
                 <p className="text-primary font-montserrat font-[700] text-[17.53px] leading-[20.81px] w-[78%] mx-auto text-center mt-16">
                     Want more details?{" "}
                     <span className="text-white font-[700]">Dive into our </span>
-                    <span className="text-[#2B2C36] anim py-1 px-1.5 rounded-full bg-primary font-[900]">
+                    <button className="text-[#2B2C36]  py-1 px-1.5 rounded-full bg-primary font-[900] anim">
                         Documentation
-                    </span>
+                    </button>
                 </p>
                 <p className="bg-[#2B2C36] text-white text-center text-[27px] py-1 font-montserrat font-[800] mt-10">
                     Explore <span className="text-primary">PumpZilla Token</span>
@@ -52,7 +60,7 @@ const Model = ({ open, setOpen }) => {
                 <p className="font-montserrat text-white font-[700] text-[16px] text-center mx-auto leading-[22px] mt-8">
                     Learn more about our exciting PumpZilla Token and how it powers the ecosystem.
                 </p>
-                <div className="flex justify-center my-8">
+                <div className="flex justify-center my-8 anim">
                     <button className="font-montserrat font-[900] text-[16px] text-[#2B2C36] bg-primary py-1.5 px-4 rounded-full">
                         GO TO ZILLA TOKEN
                     </button>

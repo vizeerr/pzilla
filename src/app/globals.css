@@ -64,9 +64,19 @@ body{
 }
 
 
-table th, table td{
+table th{
   font-weight: 800;
-  padding: 25px 0;
+  padding: 18px 0;
+border-spacing: 0;
+border-collapse: collapse;
+border: none !important;
+margin: 0;
+outline: none;
+}
+
+table td{
+  font-weight: 800;
+  padding: 10px 0;
 border-spacing: 0;
 border-collapse: collapse;
 border: none !important;

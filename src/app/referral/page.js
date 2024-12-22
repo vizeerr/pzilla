@@ -32,8 +32,10 @@ const page = () => {
             </div>
         </div>
       </div>
+      <div className='flex justify-center items-center gap-[60px] mt-[30px]'>
       <ReferalUse/>
       <ReferalBottomView/>
+      </div>
     </div>
   )
 }

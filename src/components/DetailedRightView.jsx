@@ -18,7 +18,7 @@ const DetailedRightView = () => {
   return (
     <>
         <div className='flex flex-col gap-[32px] '>
-          <div className='bg-[#1B1C1E] overflow-x-hidden relative p-[32px] shadow-[12.7px_12.7px_44.02px_0px_#0000004F] rounded-[40px]'>
+          <div className='bg-[#1B1C1E] w-[460px] overflow-x-hidden relative p-[32px] shadow-[12.7px_12.7px_44.02px_0px_#0000004F] rounded-[40px]'>
             <div className='gap-[23px] flex'>
               <button onClick={()=>setBtnState('buy')} className= {`${btnState=="buy"? "bg-primary text-[#1B1C1E]" :"text-[#666666] bg-[#2C2D30]"} border-0  anim w-full py-[10px]   shadow-[4.23px_4.23px_11.96px_0px_#00000054] rounded-[18px] font-[800] text-[21px]`}> BUY</button>
               <button  onClick={()=>setBtnState('sell')} className= {`${btnState=="sell"? "bg-primary text-[#1B1C1E]" :"text-[#666666] bg-[#2C2D30]"} border-0  anim w-full py-[10px]   shadow-[4.23px_4.23px_11.96px_0px_#00000054] rounded-[18px] font-[800] text-[21px]`}> SELL</button>
@@ -38,7 +38,9 @@ const DetailedRightView = () => {
             <div> 
                 <div className='bg-[#111111] rounded-[24px] mt-4 p-5 flex justify-between items-center shadow-[12.7px_12.7px_14.81px_0px_#00000040]'>
                     <div>
-                        <p className='font-bebasneue opacity-30 text-[24px] font-[400]'> Enter amount</p>
+                    <input type='number' onChange={(e)=>{
+                            setAmt(e.target.value)
+                        }} className='font-bebasneue text-[24px] font-[400] bg-transparent outline-none' placeholder='Enter amount'/> 
                         <p className=' opacity-30 text-[10px] font-[400]'>User balance : {balance} PROMOTION</p>
                     </div>
                     <div className='w-[48.5px] h-[48.5px] rounded-full overflow-hidden'>
@@ -79,7 +81,7 @@ const DetailedRightView = () => {
                     <div>
                         <input type='number' onChange={(e)=>{
                             setAmt(e.target.value)
-                        }} className='font-bebasneue text-[24px] font-[400] bg-transparent' placeholder='Enter amount'/> 
+                        }} className='font-bebasneue text-[24px] font-[400] bg-transparent outline-none' placeholder='Enter amount'/> 
                         <p className=' opacity-30 text-[10px] font-[400]'>User balance : {balance} {prom? "PROMOTION":"ETH"}</p>
                     </div>
                     <div className='w-[49px] h-[49px] rounded-full overflow-hidden'>
@@ -130,7 +132,7 @@ const DetailedRightView = () => {
               <p className='text-primary text-[21px] font-[700] font-montserrat'>0.86%</p>
             </div>
 
-            <div className='bg-[#111111] shadow-[8.47px_9.52px_17.57px_0px_#00000040]  w-[407px] mt-3  rounded-[32px] px-[30px] py-[30px]'>
+            <div className='bg-[#111111] shadow-[8.47px_9.52px_17.57px_0px_#00000040]  mt-3  rounded-[32px] px-[15px] py-[30px]'>
               <p className='font-[700] text-[16px] text-center leading-[18px]'>
                 
                 There are <span className='text-primary font-[900]'>676,991,162.93 PROMOTION 
@@ -161,28 +163,44 @@ const DetailedRightView = () => {
 
                 </div>
               </div>
-              <p className='text-[14px] font-montserrat font-[900] text-center mt-4'>Dethrone <span className='font-[700] opacity-40'>the current king at </span> <span className='text-primary font-[900] font-montserrat'>$43,134 market cap.</span></p>
+              <p className='text-[13px] font-montserrat font-[900] text-center mt-4'>Dethrone <span className='font-[700] opacity-40'>the current king at </span> <span className='text-primary font-[900] font-montserrat'>$43,134 market cap.</span></p>
             </div>
           </div>
           
 
           <div className='bg-[#1B1C1E]  shadow-[12.7px_12.7px_44.02px_0px_#0000004F] rounded-[40px]'>
-            <p className='font-[900] text-[25px] text-[#262626] bg-primary  py-5 w-[384px] text-center rounded-[40px_0px]'> HOLDER DISTRIBUTION</p>
-            <div className='bg-[#D9D9D926] my-8'>
+            <p className='font-[900] text-[25px] text-[#262626] bg-primary  py-3 w-[384px] text-center rounded-[40px_0px]'> HOLDER DISTRIBUTION</p>
+            <div className='bg-[#D9D9D926] mt-8 mb-4'>
               <p className='font-[900] text-[22px] text-center   py-3'> 
                 <span className='text-primary '>TOP 10</span> USERS’ HOLDING - <span className='text-primary'>30.54%</span></p>
             </div>
             <div>
-              <ul className='px-8 space-y-3 h-[398px] overflow-y-auto mb-5'>
+              <ul className='px-8  h-[410px] overflow-y-auto mb-5'>
+                <li className='flex items-center justify-between'>
+                  <p className='text-[20px] text-primary font-[800] '>034...24RD</p>
+                  <p className='text-[29px] font-bebasneue '> <span className='text-[21px]'>(BONDING CURVE)</span>   26.42 %  </p>
+                </li>
                 <li className='flex items-center justify-between'>
                   <p className='text-[20px] text-primary font-[800]'>034...24RD</p>
-                  <p className='text-[29px] font-bebasneue'> <span className='text-[21px]'>(BONDING CURVE)</span>   26.42 %  </p>
+                  <p className='text-[29px] font-bebasneue '> <span className='text-[21px]'>(DEV)</span>   26.42 %  </p>
                 </li>
                 <li className='flex items-center justify-between'>
                   <p className='text-[20px] text-primary font-[800]'>034...24RD</p>
                   <p className='text-[29px] font-bebasneue'> <span className='text-[21px]'>(DEV)</span>   26.42 %  </p>
-                </li>
+                </li> 
                 <li className='flex items-center justify-between'>
+                  <p className='text-[20px] text-primary font-[800]'>034...24RD</p>
+                  <p className='text-[29px] font-bebasneue'> <span className='text-[21px]'>(DEV)</span>   26.42 %  </p>
+                </li> <li className='flex items-center justify-between'>
+                  <p className='text-[20px] text-primary font-[800]'>034...24RD</p>
+                  <p className='text-[29px] font-bebasneue'> <span className='text-[21px]'>(DEV)</span>   26.42 %  </p>
+                </li> <li className='flex items-center justify-between'>
+                  <p className='text-[20px] text-primary font-[800]'>034...24RD</p>
+                  <p className='text-[29px] font-bebasneue'> <span className='text-[21px]'>(DEV)</span>   26.42 %  </p>
+                </li> <li className='flex items-center justify-between'>
+                  <p className='text-[20px] text-primary font-[800]'>034...24RD</p>
+                  <p className='text-[29px] font-bebasneue'> <span className='text-[21px]'>(DEV)</span>   26.42 %  </p>
+                </li> <li className='flex items-center justify-between'>
                   <p className='text-[20px] text-primary font-[800]'>034...24RD</p>
                   <p className='text-[29px] font-bebasneue'> <span className='text-[21px]'>(DEV)</span>   26.42 %  </p>
                 </li> 

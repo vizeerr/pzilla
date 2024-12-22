@@ -8,9 +8,7 @@ const page = () => {
   return (
     <div className='bg-[#121215]'>
       <TopNavbar/>
-      <LaunchForm/>
-      {/* <LaunchFooter/> */}
-      
+      <LaunchForm/>      
     </div>
   )
 }
